@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 6ab8fdf79f526f245b5b8882b26148dd
+timeCreated: 1536750642
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Astronauta
+    100002: body
+    100004: Camera
+    100006: Circle
+    100008: elbow_pole.L
+    100010: elbow_pole.L_end
+    100012: elbow_pole.R
+    100014: elbow_pole.R_end
+    100016: f_index.01.L
+    100018: f_index.01.R
+    100020: f_index.02.L
+    100022: f_index.02.R
+    100024: f_index.03.L
+    100026: f_index.03.L_end
+    100028: f_index.03.L_end_end
+    100030: f_index.03.R
+    100032: f_index.03.R_end
+    100034: f_index.03.R_end_end
+    100036: f_middle.01.L
+    100038: f_middle.01.R
+    100040: f_middle.02.L
+    100042: f_middle.02.R
+    100044: f_middle.03.L
+    100046: f_middle.03.L_end
+    100048: f_middle.03.L_end_end
+    100050: f_middle.03.R
+    100052: f_middle.03.R_end
+    100054: f_middle.03.R_end_end
+    100056: f_pinky.01.L
+    100058: f_pinky.01.R
+    100060: f_pinky.02.L
+    100062: f_pinky.02.R
+    100064: f_pinky.03.L
+    100066: f_pinky.03.L_end
+    100068: f_pinky.03.L_end_end
+    100070: f_pinky.03.R
+    100072: f_pinky.03.R_end
+    100074: f_pinky.03.R_end_end
+    100076: f_ring.01.L
+    100078: f_ring.01.R
+    100080: f_ring.02.L
+    100082: f_ring.02.R
+    100084: f_ring.03.L
+    100086: f_ring.03.L_end
+    100088: f_ring.03.L_end_end
+    100090: f_ring.03.R
+    100092: f_ring.03.R_end
+    100094: f_ring.03.R_end_end
+    100096: face
+    100098: face_end
+    100100: face_end_end
+    100102: foot.L
+    100104: foot.R
+    100106: foot_control.L
+    100108: foot_control.R
+    100110: foot_ik.L
+    100112: foot_ik.L_end
+    100114: foot_ik.R
+    100116: foot_ik.R_end
+    100118: foot_roll.L
+    100120: foot_roll.R
+    100122: forearm.L
+    100124: forearm.L_end
+    100126: forearm.R
+    100128: forearm.R_end
+    100130: hand.L
+    100132: hand.R
+    100134: hand_ik.L
+    100136: hand_ik.R
+    100138: knee_pole.L
+    100140: knee_pole.L_end
+    100142: knee_pole.R
+    100144: knee_pole.R_end
+    100146: metarig
+    100148: pelvis.L
+    100150: pelvis.L_end
+    100152: pelvis.L_end_end
+    100154: pelvis.R
+    100156: pelvis.R_end
+    100158: pelvis.R_end_end
+    100160: PoleTarget
+    100162: shin.L
+    100164: shin.L_end
+    100166: shin.R
+    100168: shin.R_end
+    100170: shoulder.L
+    100172: shoulder.R
+    100174: //RootNode
+    100176: spine
+    100178: spine.001
+    100180: spine.002
+    100182: spine.003
+    100184: spine.004
+    100186: spine.005
+    100188: spine.006
+    100190: Sun
+    100192: Sun.001
+    100194: Sun.002
+    100196: thigh.L
+    100198: thigh.R
+    100200: thumb.01.L
+    100202: thumb.01.R
+    100204: thumb.02.L
+    100206: thumb.02.R
+    100208: thumb.03.L
+    100210: thumb.03.L_end
+    100212: thumb.03.L_end_end
+    100214: thumb.03.R
+    100216: thumb.03.R_end
+    100218: thumb.03.R_end_end
+    100220: toe.L
+    100222: toe.L_end
+    100224: toe.R
+    100226: toe.R_end
+    100228: toe_control.L
+    100230: toe_control.L_end
+    100232: toe_control.R
+    100234: toe_control.R_end
+    100236: upper_arm.L
+    100238: upper_arm.R
+    400000: Astronauta
+    400002: body
+    400004: Camera
+    400006: Circle
+    400008: elbow_pole.L
+    400010: elbow_pole.L_end
+    400012: elbow_pole.R
+    400014: elbow_pole.R_end
+    400016: f_index.01.L
+    400018: f_index.01.R
+    400020: f_index.02.L
+    400022: f_index.02.R
+    400024: f_index.03.L
+    400026: f_index.03.L_end
+    400028: f_index.03.L_end_end
+    400030: f_index.03.R
+    400032: f_index.03.R_end
+    400034: f_index.03.R_end_end
+    400036: f_middle.01.L
+    400038: f_middle.01.R
+    400040: f_middle.02.L
+    400042: f_middle.02.R
+    400044: f_middle.03.L
+    400046: f_middle.03.L_end
+    400048: f_middle.03.L_end_end
+    400050: f_middle.03.R
+    400052: f_middle.03.R_end
+    400054: f_middle.03.R_end_end
+    400056: f_pinky.01.L
+    400058: f_pinky.01.R
+    400060: f_pinky.02.L
+    400062: f_pinky.02.R
+    400064: f_pinky.03.L
+    400066: f_pinky.03.L_end
+    400068: f_pinky.03.L_end_end
+    400070: f_pinky.03.R
+    400072: f_pinky.03.R_end
+    400074: f_pinky.03.R_end_end
+    400076: f_ring.01.L
+    400078: f_ring.01.R
+    400080: f_ring.02.L
+    400082: f_ring.02.R
+    400084: f_ring.03.L
+    400086: f_ring.03.L_end
+    400088: f_ring.03.L_end_end
+    400090: f_ring.03.R
+    400092: f_ring.03.R_end
+    400094: f_ring.03.R_end_end
+    400096: face
+    400098: face_end
+    400100: face_end_end
+    400102: foot.L
+    400104: foot.R
+    400106: foot_control.L
+    400108: foot_control.R
+    400110: foot_ik.L
+    400112: foot_ik.L_end
+    400114: foot_ik.R
+    400116: foot_ik.R_end
+    400118: foot_roll.L
+    400120: foot_roll.R
+    400122: forearm.L
+    400124: forearm.L_end
+    400126: forearm.R
+    400128: forearm.R_end
+    400130: hand.L
+    400132: hand.R
+    400134: hand_ik.L
+    400136: hand_ik.R
+    400138: knee_pole.L
+    400140: knee_pole.L_end
+    400142: knee_pole.R
+    400144: knee_pole.R_end
+    400146: metarig
+    400148: pelvis.L
+    400150: pelvis.L_end
+    400152: pelvis.L_end_end
+    400154: pelvis.R
+    400156: pelvis.R_end
+    400158: pelvis.R_end_end
+    400160: PoleTarget
+    400162: shin.L
+    400164: shin.L_end
+    400166: shin.R
+    400168: shin.R_end
+    400170: shoulder.L
+    400172: shoulder.R
+    400174: //RootNode
+    400176: spine
+    400178: spine.001
+    400180: spine.002
+    400182: spine.003
+    400184: spine.004
+    400186: spine.005
+    400188: spine.006
+    400190: Sun
+    400192: Sun.001
+    400194: Sun.002
+    400196: thigh.L
+    400198: thigh.R
+    400200: thumb.01.L
+    400202: thumb.01.R
+    400204: thumb.02.L
+    400206: thumb.02.R
+    400208: thumb.03.L
+    400210: thumb.03.L_end
+    400212: thumb.03.L_end_end
+    400214: thumb.03.R
+    400216: thumb.03.R_end
+    400218: thumb.03.R_end_end
+    400220: toe.L
+    400222: toe.L_end
+    400224: toe.R
+    400226: toe.R_end
+    400228: toe_control.L
+    400230: toe_control.L_end
+    400232: toe_control.R
+    400234: toe_control.R_end
+    400236: upper_arm.L
+    400238: upper_arm.R
+    2300000: Circle
+    2300002: PoleTarget
+    3300000: Circle
+    3300002: PoleTarget
+    4300000: Circle
+    4300002: PoleTarget
+    4300004: Astronauta
+    7400000: metarig|Idle
+    7400002: metarig|Walk
+    9500000: //RootNode
+    13700000: Astronauta
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: metarig|Idle
+      takeName: metarig|Idle
+      firstFrame: 0
+      lastFrame: 53
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Astronauta
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/body
+        weight: 1
+      - path: metarig/body/elbow_pole.L
+        weight: 1
+      - path: metarig/body/elbow_pole.L/elbow_pole.L_end
+        weight: 1
+      - path: metarig/body/elbow_pole.R
+        weight: 1
+      - path: metarig/body/elbow_pole.R/elbow_pole.R_end
+        weight: 1
+      - path: metarig/body/foot_control.L
+        weight: 1
+      - path: metarig/body/foot_control.L/foot_roll.L
+        weight: 1
+      - path: metarig/body/foot_control.L/foot_roll.L/foot_ik.L
+        weight: 1
+      - path: metarig/body/foot_control.L/foot_roll.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: metarig/body/foot_control.L/toe_control.L
+        weight: 1
+      - path: metarig/body/foot_control.L/toe_control.L/toe_control.L_end
+        weight: 1
+      - path: metarig/body/foot_control.R
+        weight: 1
+      - path: metarig/body/foot_control.R/foot_roll.R
+        weight: 1
+      - path: metarig/body/foot_control.R/foot_roll.R/foot_ik.R
+        weight: 1
+      - path: metarig/body/foot_control.R/foot_roll.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: metarig/body/foot_control.R/toe_control.R
+        weight: 1
+      - path: metarig/body/foot_control.R/toe_control.R/toe_control.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end/f_index.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end/f_middle.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end/f_pinky.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end/f_ring.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end/thumb.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end/f_index.03.R_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end/f_middle.03.R_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end/f_pinky.03.R_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end/f_ring.03.R_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end/thumb.03.R_end_end
+        weight: 1
+      - path: metarig/body/knee_pole.L
+        weight: 1
+      - path: metarig/body/knee_pole.L/knee_pole.L_end
+        weight: 1
+      - path: metarig/body/knee_pole.R
+        weight: 1
+      - path: metarig/body/knee_pole.R/knee_pole.R_end
+        weight: 1
+      - path: metarig/body/spine
+        weight: 1
+      - path: metarig/body/spine/pelvis.L
+        weight: 1
+      - path: metarig/body/spine/pelvis.L/pelvis.L_end
+        weight: 1
+      - path: metarig/body/spine/pelvis.L/pelvis.L_end/pelvis.L_end_end
+        weight: 1
+      - path: metarig/body/spine/pelvis.R
+        weight: 1
+      - path: metarig/body/spine/pelvis.R/pelvis.R_end
+        weight: 1
+      - path: metarig/body/spine/pelvis.R/pelvis.R_end/pelvis.R_end_end
+        weight: 1
+      - path: metarig/body/spine/spine.001
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.L
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.R
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/face
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/face/face_end
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/face/face_end/face_end_end
+        weight: 1
+      - path: metarig/body/spine/thigh.L
+        weight: 1
+      - path: metarig/body/spine/thigh.L/shin.L
+        weight: 1
+      - path: metarig/body/spine/thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: metarig/body/spine/thigh.R
+        weight: 1
+      - path: metarig/body/spine/thigh.R/shin.R
+        weight: 1
+      - path: metarig/body/spine/thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: metarig/foot.L
+        weight: 1
+      - path: metarig/foot.L/toe.L
+        weight: 1
+      - path: metarig/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: metarig/foot.R
+        weight: 1
+      - path: metarig/foot.R/toe.R
+        weight: 1
+      - path: metarig/foot.R/toe.R/toe.R_end
+        weight: 1
+      - path: PoleTarget
+        weight: 1
+      - path: Sun
+        weight: 1
+      - path: Sun.001
+        weight: 1
+      - path: Sun.002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: metarig|Walk
+      takeName: metarig|Walk
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Astronauta
+        weight: 1
+      - path: Camera
+        weight: 1
+      - path: Circle
+        weight: 1
+      - path: metarig
+        weight: 1
+      - path: metarig/body
+        weight: 1
+      - path: metarig/body/elbow_pole.L
+        weight: 1
+      - path: metarig/body/elbow_pole.L/elbow_pole.L_end
+        weight: 1
+      - path: metarig/body/elbow_pole.R
+        weight: 1
+      - path: metarig/body/elbow_pole.R/elbow_pole.R_end
+        weight: 1
+      - path: metarig/body/foot_control.L
+        weight: 1
+      - path: metarig/body/foot_control.L/foot_roll.L
+        weight: 1
+      - path: metarig/body/foot_control.L/foot_roll.L/foot_ik.L
+        weight: 1
+      - path: metarig/body/foot_control.L/foot_roll.L/foot_ik.L/foot_ik.L_end
+        weight: 1
+      - path: metarig/body/foot_control.L/toe_control.L
+        weight: 1
+      - path: metarig/body/foot_control.L/toe_control.L/toe_control.L_end
+        weight: 1
+      - path: metarig/body/foot_control.R
+        weight: 1
+      - path: metarig/body/foot_control.R/foot_roll.R
+        weight: 1
+      - path: metarig/body/foot_control.R/foot_roll.R/foot_ik.R
+        weight: 1
+      - path: metarig/body/foot_control.R/foot_roll.R/foot_ik.R/foot_ik.R_end
+        weight: 1
+      - path: metarig/body/foot_control.R/toe_control.R
+        weight: 1
+      - path: metarig/body/foot_control.R/toe_control.R/toe_control.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L/f_index.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L/f_index.02.L/f_index.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_index.01.L/f_index.02.L/f_index.03.L/f_index.03.L_end/f_index.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L/f_middle.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L/f_middle.02.L/f_middle.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_middle.01.L/f_middle.02.L/f_middle.03.L/f_middle.03.L_end/f_middle.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L/f_pinky.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_pinky.01.L/f_pinky.02.L/f_pinky.03.L/f_pinky.03.L_end/f_pinky.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L/f_ring.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L/f_ring.02.L/f_ring.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/f_ring.01.L/f_ring.02.L/f_ring.03.L/f_ring.03.L_end/f_ring.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L/thumb.02.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end
+        weight: 1
+      - path: metarig/body/hand_ik.L/hand.L/thumb.01.L/thumb.02.L/thumb.03.L/thumb.03.L_end/thumb.03.L_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R/f_index.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R/f_index.02.R/f_index.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_index.01.R/f_index.02.R/f_index.03.R/f_index.03.R_end/f_index.03.R_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R/f_middle.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_middle.01.R/f_middle.02.R/f_middle.03.R/f_middle.03.R_end/f_middle.03.R_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R/f_pinky.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_pinky.01.R/f_pinky.02.R/f_pinky.03.R/f_pinky.03.R_end/f_pinky.03.R_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R/f_ring.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/f_ring.01.R/f_ring.02.R/f_ring.03.R/f_ring.03.R_end/f_ring.03.R_end_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R/thumb.02.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end
+        weight: 1
+      - path: metarig/body/hand_ik.R/hand.R/thumb.01.R/thumb.02.R/thumb.03.R/thumb.03.R_end/thumb.03.R_end_end
+        weight: 1
+      - path: metarig/body/knee_pole.L
+        weight: 1
+      - path: metarig/body/knee_pole.L/knee_pole.L_end
+        weight: 1
+      - path: metarig/body/knee_pole.R
+        weight: 1
+      - path: metarig/body/knee_pole.R/knee_pole.R_end
+        weight: 1
+      - path: metarig/body/spine
+        weight: 1
+      - path: metarig/body/spine/pelvis.L
+        weight: 1
+      - path: metarig/body/spine/pelvis.L/pelvis.L_end
+        weight: 1
+      - path: metarig/body/spine/pelvis.L/pelvis.L_end/pelvis.L_end_end
+        weight: 1
+      - path: metarig/body/spine/pelvis.R
+        weight: 1
+      - path: metarig/body/spine/pelvis.R/pelvis.R_end
+        weight: 1
+      - path: metarig/body/spine/pelvis.R/pelvis.R_end/pelvis.R_end_end
+        weight: 1
+      - path: metarig/body/spine/spine.001
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.L
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.L/upper_arm.L/forearm.L/forearm.L_end
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.R
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/shoulder.R/upper_arm.R/forearm.R/forearm.R_end
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/face
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/face/face_end
+        weight: 1
+      - path: metarig/body/spine/spine.001/spine.002/spine.003/spine.004/spine.005/spine.006/face/face_end/face_end_end
+        weight: 1
+      - path: metarig/body/spine/thigh.L
+        weight: 1
+      - path: metarig/body/spine/thigh.L/shin.L
+        weight: 1
+      - path: metarig/body/spine/thigh.L/shin.L/shin.L_end
+        weight: 1
+      - path: metarig/body/spine/thigh.R
+        weight: 1
+      - path: metarig/body/spine/thigh.R/shin.R
+        weight: 1
+      - path: metarig/body/spine/thigh.R/shin.R/shin.R_end
+        weight: 1
+      - path: metarig/foot.L
+        weight: 1
+      - path: metarig/foot.L/toe.L
+        weight: 1
+      - path: metarig/foot.L/toe.L/toe.L_end
+        weight: 1
+      - path: metarig/foot.R
+        weight: 1
+      - path: metarig/foot.R/toe.R
+        weight: 1
+      - path: metarig/foot.R/toe.R/toe.R_end
+        weight: 1
+      - path: PoleTarget
+        weight: 1
+      - path: Sun
+        weight: 1
+      - path: Sun.001
+        weight: 1
+      - path: Sun.002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
