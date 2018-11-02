@@ -9,12 +9,12 @@ public class Enemy : MonoBehaviour {
 	public int health, maxHealth;
 	public int strength;
 
-	Animator animator;
+	//Animator animator;
 	NavMeshAgent agent;
 	bool isDead = false;
 
 	private void Awake() {
-		animator = GetComponent<Animator>();
+		//animator = GetComponent<Animator>();
 		agent = GetComponent<NavMeshAgent>();
 	}
 	
@@ -23,11 +23,10 @@ public class Enemy : MonoBehaviour {
         if (isDead) return;
         if (health <= 0) {
 			isDead = true;
-			animator.SetTrigger("dead");
+			//animator.SetTrigger("dead");
 			agent.enabled = false;
 			Destroy(gameObject, 5f);
 		}
-        animator.SetBool("run", true);
     }
 
 	public void takeDamage(int damage) {
@@ -41,7 +40,6 @@ public class Enemy : MonoBehaviour {
 		if (other.CompareTag("Player")) {
 
 			Debug.Log("Enemy trigger with player");
-            animator.SetTrigger("attack");
             other.gameObject.GetComponent<HealthPoints>().removeHealth(strength);
 		}
 	}
@@ -51,7 +49,6 @@ public class Enemy : MonoBehaviour {
 		if (collision.collider.CompareTag("Player")) {
 
 			Debug.Log("Enemy collision with player");
-            animator.SetTrigger("attack");
             collision.gameObject.GetComponent<HealthPoints>().removeHealth(strength);
 		}
 	}
