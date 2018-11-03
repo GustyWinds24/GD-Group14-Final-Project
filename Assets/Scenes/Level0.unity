@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3751,7 +3751,24 @@ Prefab:
       propertyPath: m_Name
       value: wolf_02_Mecanim (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 136631924103574652, guid: 6f8ce944562feeb4989b0b19ecea0122,
+        type: 2}
+      propertyPath: m_Radius
+      value: 6.3275776
+      objectReference: {fileID: 0}
+    - target: {fileID: 136631924103574652, guid: 6f8ce944562feeb4989b0b19ecea0122,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 6.298924
+      objectReference: {fileID: 0}
+    - target: {fileID: 136631924103574652, guid: 6f8ce944562feeb4989b0b19ecea0122,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 1.1866829
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114504418424774134, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
+    - {fileID: 114935315052445334, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &131800571 stripped
@@ -25250,7 +25267,29 @@ Prefab:
       propertyPath: m_Name
       value: wolf_02_Mecanim (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 136074730879460360, guid: 287b57c0114279744be431f31b2248e5,
+        type: 2}
+      propertyPath: m_Radius
+      value: 6.308745
+      objectReference: {fileID: 0}
+    - target: {fileID: 136074730879460360, guid: 287b57c0114279744be431f31b2248e5,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.0000000073620585
+      objectReference: {fileID: 0}
+    - target: {fileID: 136074730879460360, guid: 287b57c0114279744be431f31b2248e5,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 6.3177543
+      objectReference: {fileID: 0}
+    - target: {fileID: 136074730879460360, guid: 287b57c0114279744be431f31b2248e5,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 1.1866823
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114537351554522988, guid: 287b57c0114279744be431f31b2248e5, type: 2}
+    - {fileID: 114803537283370492, guid: 287b57c0114279744be431f31b2248e5, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 287b57c0114279744be431f31b2248e5, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &733204266 stripped
@@ -34439,6 +34478,26 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49bfd2e7a273e7a4ca574b30808dd0b4, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1021275456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1646176416045644, guid: 6f8ce944562feeb4989b0b19ecea0122,
+    type: 2}
+  m_PrefabInternal: {fileID: 131800570}
+--- !u!114 &1021275458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021275456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111e5870229836d488bf90b1bda6ded5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Otherworldly Mutt (Adult)
+  health: 25
+  maxHealth: 25
+  strength: 15
 --- !u!1 &1022891757 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 7ad6fa53f59b2944dbbdfaf6c7226bf0,
@@ -35391,6 +35450,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060646689}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1060688358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060758810450302, guid: 287b57c0114279744be431f31b2248e5,
+    type: 2}
+  m_PrefabInternal: {fileID: 733204265}
+--- !u!114 &1060688360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1060688358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111e5870229836d488bf90b1bda6ded5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Otherworldly Mutt (Child)
+  health: 20
+  maxHealth: 20
+  strength: 10
 --- !u!1 &1065559372
 GameObject:
   m_ObjectHideFlags: 0
@@ -41469,7 +41548,24 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1300451491}
-    m_RemovedComponents: []
+    - target: {fileID: 136631924103574652, guid: 6f8ce944562feeb4989b0b19ecea0122,
+        type: 2}
+      propertyPath: m_Radius
+      value: 6.3275776
+      objectReference: {fileID: 0}
+    - target: {fileID: 136631924103574652, guid: 6f8ce944562feeb4989b0b19ecea0122,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 6.298924
+      objectReference: {fileID: 0}
+    - target: {fileID: 136631924103574652, guid: 6f8ce944562feeb4989b0b19ecea0122,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 1.1866829
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114504418424774134, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
+    - {fileID: 114935315052445334, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1236713280
@@ -52595,6 +52691,26 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1540783022}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1543185682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060758810450302, guid: 287b57c0114279744be431f31b2248e5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1779385009}
+--- !u!114 &1543185684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1543185682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111e5870229836d488bf90b1bda6ded5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Otherworldly Mutt (Child)
+  health: 20
+  maxHealth: 20
+  strength: 10
 --- !u!1001 &1545030076
 Prefab:
   m_ObjectHideFlags: 0
@@ -60930,7 +61046,29 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1300451491}
-    m_RemovedComponents: []
+    - target: {fileID: 136074730879460360, guid: 287b57c0114279744be431f31b2248e5,
+        type: 2}
+      propertyPath: m_Radius
+      value: 6.308745
+      objectReference: {fileID: 0}
+    - target: {fileID: 136074730879460360, guid: 287b57c0114279744be431f31b2248e5,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.0000000073620585
+      objectReference: {fileID: 0}
+    - target: {fileID: 136074730879460360, guid: 287b57c0114279744be431f31b2248e5,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 6.3177543
+      objectReference: {fileID: 0}
+    - target: {fileID: 136074730879460360, guid: 287b57c0114279744be431f31b2248e5,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 1.1866823
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114537351554522988, guid: 287b57c0114279744be431f31b2248e5, type: 2}
+    - {fileID: 114803537283370492, guid: 287b57c0114279744be431f31b2248e5, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 287b57c0114279744be431f31b2248e5, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1779385010 stripped
@@ -63724,6 +63862,26 @@ Prefab:
     - {fileID: 20500000, guid: 7ad6fa53f59b2944dbbdfaf6c7226bf0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7ad6fa53f59b2944dbbdfaf6c7226bf0, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1865505006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1646176416045644, guid: 6f8ce944562feeb4989b0b19ecea0122,
+    type: 2}
+  m_PrefabInternal: {fileID: 1234805905}
+--- !u!114 &1865505014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865505006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111e5870229836d488bf90b1bda6ded5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Otherworldly Mutt (Adult)
+  health: 25
+  maxHealth: 25
+  strength: 15
 --- !u!1 &1866561196
 GameObject:
   m_ObjectHideFlags: 0
