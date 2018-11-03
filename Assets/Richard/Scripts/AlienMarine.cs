@@ -21,7 +21,6 @@ public class AlienMarine : Enemy {
 	Ray ray;
 	RaycastHit hit;
 	AudioSource gunAudio;
-	public AudioClip shootingSound;
 
 	private void Awake() {
 		player = GameObject.FindGameObjectWithTag("Player");
@@ -38,7 +37,6 @@ public class AlienMarine : Enemy {
 		miss2 = new Vector3 (-.05f, 0, 1);
 		ray = new Ray();
 		hit = new RaycastHit();
-		gunAudio.clip = shootingSound;
 	}
 
 	// Update is called once per frame
