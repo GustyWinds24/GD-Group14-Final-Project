@@ -69,10 +69,9 @@ GameObject:
   - component: {fileID: 54388152604337700}
   - component: {fileID: 136074730879460360}
   - component: {fileID: 195279743142397608}
-  - component: {fileID: 114537351554522988}
-  - component: {fileID: 114803537283370492}
+  - component: {fileID: 114286603832173158}
   m_Layer: 0
-  m_Name: wolf_02_Mecanim (2)
+  m_Name: WolfChild
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1396,7 +1395,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114537351554522988
+--- !u!114 &114286603832173158
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1404,20 +1403,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1060758810450302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a57ff64364f0eea4e8a4861eac55d786, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  removeHealthAmount: 2
---- !u!114 &114803537283370492
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1060758810450302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726aee5538099bf498679b8501914204, type: 3}
+  m_Script: {fileID: 11500000, guid: 111e5870229836d488bf90b1bda6ded5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Otherworldly Mutt (Child)
@@ -1445,10 +1431,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 3.5203688
+  m_Radius: 6.308745
   m_Height: 17.450165
   m_Direction: 2
-  m_Center: {x: 0, y: 9.106133, z: 1.1866828}
+  m_Center: {x: 0.0000000073620585, y: 6.3177543, z: 1.1866823}
 --- !u!137 &137663352130192398
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

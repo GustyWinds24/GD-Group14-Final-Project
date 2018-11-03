@@ -468,10 +468,10 @@ GameObject:
   - component: {fileID: 54644584198798944}
   - component: {fileID: 136631924103574652}
   - component: {fileID: 195441420663760276}
-  - component: {fileID: 114504418424774134}
-  - component: {fileID: 114935315052445334}
+  - component: {fileID: 114074917519266704}
+  - component: {fileID: 114223461622716988}
   m_Layer: 0
-  m_Name: wolf_02_Mecanim
+  m_Name: WolfAdult
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1074,8 +1074,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1646176416045644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.98, y: -0.19735973, z: -9.12}
-  m_LocalScale: {x: 0.027468648, y: 0.027468648, z: 0.027468648}
+  m_LocalPosition: {x: -12.9800005, y: -0.19735973, z: -7.44}
+  m_LocalScale: {x: 0.027469747, y: 0.027469747, z: 0.027469747}
   m_Children:
   - {fileID: 4752068360328078}
   - {fileID: 4278565689191980}
@@ -1396,7 +1396,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114504418424774134
+--- !u!114 &114074917519266704
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1404,25 +1404,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1646176416045644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a57ff64364f0eea4e8a4861eac55d786, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  removeHealthAmount: 2
---- !u!114 &114935315052445334
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1646176416045644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726aee5538099bf498679b8501914204, type: 3}
+  m_Script: {fileID: 11500000, guid: 111e5870229836d488bf90b1bda6ded5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Otherworldly Mutt (Adult)
-  health: 20
-  maxHealth: 20
+  health: 25
+  maxHealth: 25
+  strength: 15
+--- !u!114 &114223461622716988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1646176416045644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111e5870229836d488bf90b1bda6ded5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyName: Otherworldly Mutt (Adult)
+  health: 25
+  maxHealth: 25
   strength: 15
 --- !u!135 &135585516738064242
 SphereCollider:
@@ -1445,10 +1447,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 3.5203688
+  m_Radius: 6.3275776
   m_Height: 17.450165
   m_Direction: 2
-  m_Center: {x: 0, y: 9.106133, z: 1.1866828}
+  m_Center: {x: 0, y: 6.298924, z: 1.1866829}
 --- !u!137 &137161687335343704
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
