@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3734,7 +3734,8 @@ Prefab:
       propertyPath: m_Name
       value: wolf_02_Mecanim (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114223461622716988, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &131800571 stripped
@@ -35254,26 +35255,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1060646689}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1060688358 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1060758810450302, guid: 287b57c0114279744be431f31b2248e5,
-    type: 2}
-  m_PrefabInternal: {fileID: 733204265}
---- !u!114 &1060688360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1060688358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 111e5870229836d488bf90b1bda6ded5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyName: Otherworldly Mutt (Child)
-  health: 20
-  maxHealth: 20
-  strength: 10
 --- !u!1 &1065559372
 GameObject:
   m_ObjectHideFlags: 0
@@ -41422,7 +41403,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114223461622716988, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1236713280
