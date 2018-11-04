@@ -107,6 +107,14 @@ public class GameManager : MonoBehaviour {
 			case 1:
 				Level1Manager.instance.pauseGame();
 				break;
+
+			case 2:
+				Level2Manager.instance.pauseGame();
+				break;
+
+			case 3:
+				Level3Manager.instance.pauseGame();
+				break;
 		}
 	}
 
@@ -120,6 +128,14 @@ public class GameManager : MonoBehaviour {
 
 			case 1:
 				Level1Manager.instance.unpauseGame();
+				break;
+
+			case 2:
+				Level2Manager.instance.unpauseGame();
+				break;
+
+			case 3:
+				Level3Manager.instance.unpauseGame();
 				break;
 		}
 	}
