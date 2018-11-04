@@ -25,6 +25,8 @@ public class Level2Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GameManager.instance.setCurrentLevel(2);
+		hudController.setTrial(2);
+		hudController.reset();
 		hudController.displayPrompt(prompt);
 	}
 	

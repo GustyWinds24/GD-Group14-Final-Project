@@ -25,6 +25,8 @@ public class Level3Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GameManager.instance.setCurrentLevel(3);
+		hudController.setTrial(3);
+		hudController.reset();
 		hudController.displayPrompt(prompt);
 	}
 	
