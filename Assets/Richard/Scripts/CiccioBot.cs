@@ -37,7 +37,7 @@ public class CiccioBot : Enemy {
 		gun = transform.GetChild(0).gameObject.transform;
 		gunLine = GetComponent<LineRenderer>();
 		soundEffects = GetComponent<AudioSource>();
-		playerTarget = player.gameObject.GetComponent<HealthPoints>().target;
+		playerTarget = player.gameObject.GetComponent<HealthPoints>().getTarget();
 	}
 
 	private void Start() {

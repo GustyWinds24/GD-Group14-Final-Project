@@ -8,7 +8,11 @@ public class HealthPoints : MonoBehaviour {
     public int myHealth = 100;
     public int maxHealth = 100;
 
-	public GameObject target;
+	GameObject target;
+
+	private void Awake() {
+		target = transform.GetChild(5).gameObject;
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -53,4 +57,6 @@ public class HealthPoints : MonoBehaviour {
 		myHealth += health;
 		if (myHealth >= 100) myHealth = 100;
 	}
+
+	public GameObject getTarget() {return target;}
 }
