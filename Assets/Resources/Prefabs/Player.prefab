@@ -485,7 +485,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myHealth: 100
   maxHealth: 100
-  target: {fileID: 1156066683147508}
 --- !u!114 &114866211264103928
 MonoBehaviour:
   m_ObjectHideFlags: 1
