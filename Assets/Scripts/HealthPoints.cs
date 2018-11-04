@@ -7,7 +7,9 @@ public class HealthPoints : MonoBehaviour {
 
     public int myHealth = 100;
     public int maxHealth = 100;
-	
+
+	public GameObject target;
+
 	// Update is called once per frame
 	void Update () {
 		if(myHealth == 0)

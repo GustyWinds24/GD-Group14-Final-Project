@@ -78,7 +78,7 @@ public class AlienMarine : Enemy {
 
 		if (checkDistanceTimer >= 1) {
 			float distance = Vector3.Distance(transform.position, player.transform.position);
-			if (1 <= distance && distance <= 15) {
+			if (2 <= distance && distance <= 15) {
 				foundPlayer = true;
 				if (!aiming) {
 					animator.SetTrigger("aim");

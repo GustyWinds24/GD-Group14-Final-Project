@@ -11,6 +11,21 @@ Prefab:
   m_SourcePrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1522430267379046}
   m_IsPrefabAsset: 1
+--- !u!1 &1156066683147508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4119693488251570}
+  m_Layer: 0
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1271780859525948
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,6 +73,7 @@ GameObject:
   - component: {fileID: 114621094341884964}
   - component: {fileID: 114867366657827144}
   - component: {fileID: 82211981187816062}
+  - component: {fileID: 54705730815002124}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -119,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1522430267379046}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 57.46, y: 0.55, z: -39.37}
+  m_LocalPosition: {x: 57.46, y: 1.968, z: -39.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4807952572395700}
@@ -127,8 +143,22 @@ Transform:
   - {fileID: 4266237554633932}
   - {fileID: 4560525614647212}
   - {fileID: 4938054374518216}
+  - {fileID: 4119693488251570}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4119693488251570
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1156066683147508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4067767238589788}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4266237554633932
 Transform:
@@ -137,7 +167,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1555802563685660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.589, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4067767238589788}
@@ -163,7 +193,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895885293786332}
   m_LocalRotation: {x: -0.009803892, y: -0.035799082, z: 0.009459148, w: 0.9992662}
-  m_LocalPosition: {x: 0.0135, y: 1.909, z: -0.0397}
+  m_LocalPosition: {x: 0.0135, y: 0.326, z: -0.0411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4067767238589788}
@@ -189,12 +219,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416786286221498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.154, z: 0}
+  m_LocalPosition: {x: 0, y: 0.914, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4067767238589788}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54705730815002124
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522430267379046}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!82 &82211981187816062
 AudioSource:
   m_ObjectHideFlags: 1
@@ -426,9 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce43bac7b85fd6f4093de5ecd8468724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverPanel: {fileID: 0}
   dropPoint: -20
-  currentLevel: TutorialLevel
 --- !u!114 &114621094341884964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -442,7 +485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myHealth: 100
   maxHealth: 100
-  gameOverPanel: {fileID: 0}
+  target: {fileID: 1156066683147508}
 --- !u!114 &114866211264103928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -577,4 +620,4 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 0.95, z: 0}
