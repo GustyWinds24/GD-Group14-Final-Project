@@ -55,7 +55,7 @@ public class HealthPoints : MonoBehaviour {
 
 	public void collectMedkit(int health) {
 		myHealth += health;
-		if (myHealth >= 100) myHealth = 100;
+		if (myHealth > maxHealth) myHealth = maxHealth;
 	}
 
 	public GameObject getTarget() {return target;}

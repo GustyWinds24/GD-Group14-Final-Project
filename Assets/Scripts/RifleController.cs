@@ -83,7 +83,6 @@ public class RifleController : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 200f)) {
             if (hit.collider.gameObject.CompareTag("Enemy")) {
 				Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
-				if (enemy == null) Debug.Log("Script: Enemy is null");
 				enemy.takeDamage(currentWeapon.damage);
 				hudController.setDisplayEnemy(enemy);
 				hudController.showEnemy();

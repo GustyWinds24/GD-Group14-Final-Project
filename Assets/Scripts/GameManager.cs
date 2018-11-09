@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 
 	public AudioClip medkitAudio;
 	public AudioClip DamageBottleSound;
+	public AudioClip scanning;
 
     int currentLevel;
 
@@ -89,6 +90,11 @@ public class GameManager : MonoBehaviour {
 
 	public void playDamageBottleSound() {
 		soundEffects.clip = DamageBottleSound;
+		soundEffects.Play();
+	}
+
+	public void playScanningSound() {
+		soundEffects.clip = scanning;
 		soundEffects.Play();
 	}
 

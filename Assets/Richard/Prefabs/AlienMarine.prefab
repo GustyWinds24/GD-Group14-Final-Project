@@ -1831,7 +1831,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f0f9c11c7257f48feb7f87746b03e573, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1948,6 +1948,7 @@ MonoBehaviour:
   health: 40
   maxHealth: 40
   strength: 15
+  secondsBeforeDestroy: 7
   timeBetweenShots: 2
 --- !u!120 &120739910651095622
 LineRenderer:
@@ -2223,7 +2224,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1079274909495934}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
+  m_Radius: 1.5
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50

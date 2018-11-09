@@ -13,7 +13,6 @@ public class AnimateWolf : Enemy {
 
     // for the player when he steps into the navmesh
     ulong count = 0;
-    GameObject player;
     Transform playerTransform;
 
     // Use this for initialization

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -468,6 +468,7 @@ MonoBehaviour:
   health: 35
   maxHealth: 35
   strength: 15
+  secondsBeforeDestroy: 7
 --- !u!135 &17169307
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1724,6 +1725,7 @@ MonoBehaviour:
   health: 35
   maxHealth: 35
   strength: 15
+  secondsBeforeDestroy: 7
 --- !u!135 &52329886
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8132,6 +8134,7 @@ MonoBehaviour:
   health: 35
   maxHealth: 35
   strength: 15
+  secondsBeforeDestroy: 7
 --- !u!135 &248769680
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20989,6 +20992,7 @@ MonoBehaviour:
   health: 35
   maxHealth: 35
   strength: 15
+  secondsBeforeDestroy: 7
 --- !u!135 &590259163
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -29416,6 +29420,7 @@ MonoBehaviour:
   health: 35
   maxHealth: 35
   strength: 15
+  secondsBeforeDestroy: 7
 --- !u!135 &826306455
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38056,6 +38061,7 @@ MonoBehaviour:
   health: 35
   maxHealth: 35
   strength: 15
+  secondsBeforeDestroy: 7
 --- !u!135 &1136503310
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -41919,6 +41925,7 @@ MonoBehaviour:
   health: 35
   maxHealth: 35
   strength: 15
+  secondsBeforeDestroy: 7
 --- !u!135 &1236814459
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -42437,6 +42444,7 @@ MonoBehaviour:
   health: 35
   maxHealth: 35
   strength: 15
+  secondsBeforeDestroy: 7
 --- !u!135 &1250056448
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -42904,23 +42912,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114545587384155828, guid: c18da0fb6340c4c46bb5c844598dc1f4,
-        type: 2}
-      propertyPath: gameOverPanel
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114621094341884964, guid: c18da0fb6340c4c46bb5c844598dc1f4,
-        type: 2}
-      propertyPath: gameOverPanel
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114621094341884964, guid: c18da0fb6340c4c46bb5c844598dc1f4,
-        type: 2}
-      propertyPath: myHealth
-      value: 100
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114545587384155828, guid: c18da0fb6340c4c46bb5c844598dc1f4, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c18da0fb6340c4c46bb5c844598dc1f4, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1257354544
@@ -46029,7 +46021,7 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114422323528598230, guid: 311f1a069f9ba0544b0cb13aae6281bc,
+    - target: {fileID: 114096856715890922, guid: 311f1a069f9ba0544b0cb13aae6281bc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -46039,7 +46031,17 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1654392759}
-    - target: {fileID: 114096856715890922, guid: 311f1a069f9ba0544b0cb13aae6281bc,
+    - target: {fileID: 114195827881851128, guid: 311f1a069f9ba0544b0cb13aae6281bc,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1654392759}
+    - target: {fileID: 114941179714104248, guid: 311f1a069f9ba0544b0cb13aae6281bc,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1654392759}
+    - target: {fileID: 114422323528598230, guid: 311f1a069f9ba0544b0cb13aae6281bc,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -46054,16 +46056,6 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1442752232}
-    - target: {fileID: 114941179714104248, guid: 311f1a069f9ba0544b0cb13aae6281bc,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1654392759}
-    - target: {fileID: 114195827881851128, guid: 311f1a069f9ba0544b0cb13aae6281bc,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1654392759}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 311f1a069f9ba0544b0cb13aae6281bc, type: 2}
   m_IsPrefabAsset: 0
@@ -64491,6 +64483,7 @@ MonoBehaviour:
   health: 35
   maxHealth: 35
   strength: 15
+  secondsBeforeDestroy: 7
 --- !u!195 &1849255123
 NavMeshAgent:
   m_ObjectHideFlags: 0

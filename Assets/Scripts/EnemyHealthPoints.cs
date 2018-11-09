@@ -12,7 +12,7 @@ public class EnemyHealthPoints : MonoBehaviour {
     public GameObject enemyHealthDisplay;
     public GameObject enemyNameDisplay;
     public GameObject enemyStatusPanel;
-    private int getTime;
+    //private int getTime;
     private int isDeadFlag;
 
     // Use this for initialization
@@ -47,7 +47,7 @@ public class EnemyHealthPoints : MonoBehaviour {
         enemyNameDisplay.GetComponent<EnemyNameDisplay>().setEnemyName(enemyName);
         enemyHealthDisplay.GetComponent<EnemyHealthDisplay>().setEnemy(gameObject);
         enemyHealthDisplay.GetComponent<EnemyHealthDisplay>().setHitPoints();
-        getTime = 3;
+        //getTime = 3;
         enemyStatusPanel.SetActive(true);
         new WaitForSeconds(2.5f);
         //enemyStatusPanel.SetActive(false);

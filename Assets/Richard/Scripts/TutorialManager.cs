@@ -41,7 +41,7 @@ public class TutorialManager : MonoBehaviour {
 
 					"Look out! Alien mutts! You can't shoot them standing up! Remember what to do with enemies smaller than you. Though " +
 					"you can still throw grenades, they can still avoid them. If they touch you, you lose health! Run if they get too near! " +
-					"Also, you can see their name and current health status at the top left corner of your screen. This can help you keep track " +
+					"Also, you can see their name and current health status on the left of your screen. This can help you keep track " +
 					"of who you're facing.",
 
 					"Items are scattered around through each level. Pick one up and you can be healed, granted a temporary speed boost, receive " +

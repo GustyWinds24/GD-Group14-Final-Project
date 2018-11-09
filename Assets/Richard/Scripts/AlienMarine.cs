@@ -5,8 +5,6 @@ using UnityEngine.AI;
 
 public class AlienMarine : Enemy {
 
-	GameObject player;
-
 	bool aiming = false;
 	bool foundPlayer = false;
 	bool foundRandPoint = false;
@@ -44,11 +42,16 @@ public class AlienMarine : Enemy {
 		
 		if (Time.deltaTime == 0) return;
 
+		if (isDead) {
+			if (sink) transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
+			return;
+		}
+
 		if (health <= 0) {
 			isDead = true;
 			animator.SetTrigger("dead");
 			agent.enabled = false;
-			Destroy(gameObject, 4.5f);
+			Destroy(gameObject, 6);
 			enabled = false;
 			return;
 		}
@@ -114,8 +117,6 @@ public class AlienMarine : Enemy {
 	private void OnTriggerEnter(Collider other) {
 		
 		if (other.CompareTag("Player")) {
-
-			Debug.Log("Enemy trigger with player");
 			other.gameObject.GetComponent<HealthPoints>().removeHealth(strength);
 		}
 	}
@@ -155,5 +156,9 @@ public class AlienMarine : Enemy {
 	void disableEffects() {
 		gunLine.enabled = false;
 		effectsOn = false;
+	}
+
+	public void deathFinished() {
+		sink = true;
 	}
 }

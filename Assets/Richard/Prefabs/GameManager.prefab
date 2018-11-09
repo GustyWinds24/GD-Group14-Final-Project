@@ -149,3 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   medkitAudio: {fileID: 8300000, guid: e59fc7374dc374d6db7f805e43cc5c06, type: 3}
   DamageBottleSound: {fileID: 8300000, guid: b2204f47b903e413e8e8e442d60a8ca1, type: 3}
+  scanning: {fileID: 8300000, guid: e480b7238979674499f6b7b25674ba67, type: 3}

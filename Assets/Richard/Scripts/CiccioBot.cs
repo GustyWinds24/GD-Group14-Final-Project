@@ -4,10 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class CiccioBot : Enemy {
-
-	GameObject player;
-
-	bool aiming = false;
+	
 	bool targetStatus = false;
 	bool foundRandPoint = false;
 	bool effectsOn = false;
@@ -20,15 +17,12 @@ public class CiccioBot : Enemy {
 	public float randomDestinationRange = 15;
 	public float randomDirectionWaitTime = 10;
 	public float targetingRange = 20;
-	Vector3 rayDirection;
 	LineRenderer gunLine;
 	Transform gun;
-	Vector3 miss0, miss1, miss2;
 	Ray ray;
 	RaycastHit hit;
 	AudioSource soundEffects;
 	public AudioClip ciccioTalkAudio, ciccioShootAudio, ciccioDieAudio;
-	GameObject playerTarget;
 
 	private void Awake() {
 		player = GameObject.FindGameObjectWithTag("Player");
@@ -41,12 +35,8 @@ public class CiccioBot : Enemy {
 	}
 
 	private void Start() {
-		miss0 = Vector3.zero;
-		miss1 = new Vector3 (.25f, 0, 1);
-		miss2 = new Vector3 (-.25f, 0, 1);
 		ray = new Ray();
 		hit = new RaycastHit();
-		rayDirection = Vector3.zero;
 	}
 
 	// Update is called once per frame
@@ -54,14 +44,18 @@ public class CiccioBot : Enemy {
 		
 		if (Time.deltaTime == 0) return;
 
+		if (isDead) {
+			if (sink) transform.Translate (-Vector3.up * sinkSpeed * Time.deltaTime);
+			return;
+		}
+
 		if (health <= 0) {
 			playCiccioDieAudio();
 			isDead = true;
 			animator.SetTrigger("CancelAttack");
 			animator.SetTrigger("Dead");
 			agent.enabled = false;
-			Destroy(gameObject, 4.5f);
-			enabled = false;
+			Destroy(gameObject, secondsBeforeDestroy);
 			return;
 		}
 
@@ -88,7 +82,6 @@ public class CiccioBot : Enemy {
 
 			foundRandPoint = moveAgentToRandom();
 			if (foundRandPoint) {
-				agent.isStopped = false;
 				randomDirectionTimer = 0f;
 				foundRandPoint = false;
 			}
@@ -115,7 +108,6 @@ public class CiccioBot : Enemy {
 		else animator.SetBool("Move", false);
 
 		if (effectsOn && shootTimer >= (timeBetweenShots * .01f)) disableEffects();
-		
 	}
 
 	bool moveAgentToRandom() {
@@ -155,7 +147,6 @@ public class CiccioBot : Enemy {
 			if (hit.collider.CompareTag("Player")) {
 				hit.collider.gameObject.GetComponent<HealthPoints>().removeHealth(strength);
 			}
-			else Debug.Log("didn't hit player");
 		}
 
 		gunLine.SetPosition(0, gun.position);
@@ -183,4 +174,6 @@ public class CiccioBot : Enemy {
 		soundEffects.clip = ciccioDieAudio;
 		soundEffects.Play();
 	}
+
+	public void deathFinished() {sink = true;}
 }

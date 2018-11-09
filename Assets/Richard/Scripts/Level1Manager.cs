@@ -15,13 +15,16 @@ public class Level1Manager : MonoBehaviour {
     public static Level1Manager instance;
 
     bool hasKey1 = false, hasKey2 = false, hasKey3 = false; 
+	short intel = 0;
 	//bool hasBigKey = false;
 
 	AudioSource soundEffects;
 	HUDController hudController;
 
-	string prompt = "This is your first trial. Don't take it as lightly as you did outside. Explore around and find the keys to open the door to the next level/trial. " +
-					"Be careful not to get hurt. I hope you're trigger happy.";
+	string prompt = "This is your first trial. You've stumbled into one of the alien barracks. " + 
+					"Don't take it as lightly as you did outside. We need you to gather some valuable " +
+					"intel we believe is on this floor. The code to get to the stairs is on one of the " +
+					"documents. The intel is vital to our future operations. Stay alive soldier.";
 
     private void Awake()
     {
@@ -83,45 +86,32 @@ public class Level1Manager : MonoBehaviour {
         switch (gate)
         {
             case "Gate1":
-                if (hasKey1)
-                {
+                if (hasKey1) {
                     //Open Gate 1
 					gate1.GetComponent<Animator>().SetTrigger("open");
                     hasKey = true;
                 }
-                else
-                {
-                    hasKey = false;
-                }
                 break;
             case "Gate2":
-                if (hasKey2)
-                {
+                if (hasKey2) {
                     //Open Gate 2
 					gate2.GetComponent<Animator>().SetTrigger("open");
                     hasKey = true;
                 }
-                else
-                {
-                    hasKey = false;
-                }
                 break;
             case "Gate3":
-                if (hasKey3)
-                {
+                if (hasKey3) {
                     //Open Gate 3
 					gate3.GetComponent<Animator>().SetTrigger("open");
                     hasKey = true;
                 }
-                else
-                {
-                    hasKey = false;
-                }
                 break;
             case "ExitDoor":
 				//Open Exit Door
-				gate4.GetComponent<Animator>().SetTrigger("open");
-                hasKey = true;
+				if (intel >= 2) {
+					gate4.GetComponent<Animator>().SetTrigger("open");
+					hasKey = true;
+				}
                 break;
              }
 
@@ -174,6 +164,10 @@ public class Level1Manager : MonoBehaviour {
 	public void gameOver() {
 		Time.timeScale = 0;
 		hudController.gameOver();
+	}
+
+	public void collectIntel() {
+		intel++;
 	}
 
 	public void pauseGame() {hudController.displayPauseMenu();}
