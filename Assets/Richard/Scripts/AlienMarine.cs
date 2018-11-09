@@ -50,9 +50,9 @@ public class AlienMarine : Enemy {
 		if (health <= 0) {
 			isDead = true;
 			animator.SetTrigger("dead");
+			disableEffects();
 			agent.enabled = false;
 			Destroy(gameObject, 6);
-			enabled = false;
 			return;
 		}
 
