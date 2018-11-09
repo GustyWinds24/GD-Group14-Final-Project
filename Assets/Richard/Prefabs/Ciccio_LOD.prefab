@@ -1403,7 +1403,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592409748608186}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 38.60844, y: 40.830547, z: 41.42757}
+  m_LocalPosition: {x: 38.60844, y: 40.830547, z: 15.17757}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4269194840314030}
@@ -2253,6 +2253,7 @@ MonoBehaviour:
   health: 60
   maxHealth: 60
   strength: 25
+  secondsBeforeDestroy: 7
   timeBetweenShots: 7
   stoppingDistance: 2
   randomDestinationRange: 30
@@ -2718,7 +2719,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1592409748608186}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2
+  m_Radius: 3
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50

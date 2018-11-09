@@ -908,14 +908,6 @@ Prefab:
       propertyPath: m_Name
       value: AlienMarine (26)
       objectReference: {fileID: 0}
-    - target: {fileID: 4338804833777772, guid: 88c5c690f618250479361e22d1989eb0, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.0000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 4338804833777772, guid: 88c5c690f618250479361e22d1989eb0, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0000002
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88c5c690f618250479361e22d1989eb0, type: 2}
   m_IsPrefabAsset: 0
@@ -9991,58 +9983,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 4899342291797870, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4899342291797870, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4899342291797870, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680928496834968, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680928496834968, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680928496834968, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4899221450499954, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4899221450499954, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4899221450499954, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 120893706971111672, guid: fbaa9a5e4123766479175958d0dfc83e,
-        type: 2}
-      propertyPath: m_Parameters.widthMultiplier
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 1592409748608186, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
       propertyPath: m_Name
       value: Ciccio_LOD (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4304764356495508, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4304764356495508, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbaa9a5e4123766479175958d0dfc83e, type: 2}
