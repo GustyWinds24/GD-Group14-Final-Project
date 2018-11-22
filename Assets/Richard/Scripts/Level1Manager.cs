@@ -15,8 +15,7 @@ public class Level1Manager : MonoBehaviour {
     public static Level1Manager instance;
 
     bool hasKey1 = false, hasKey2 = false, hasKey3 = false; 
-	short intel = 2;
-	//bool hasBigKey = false;
+	short intel = 0;
 
 	AudioSource soundEffects;
 	HUDController hudController;
