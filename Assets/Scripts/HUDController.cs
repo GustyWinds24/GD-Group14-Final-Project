@@ -42,11 +42,19 @@ public class HUDController : MonoBehaviour {
 		playerHealth = player.GetComponent<HealthPoints>();
 		rifleController = player.GetComponent<RifleController>();
 		promptText = promptPanel.transform.GetChild(0).gameObject.GetComponent<Text>();
+
 	}
 
 	// Use this for initialization
 	void Start () {
 		currentWeaponText.text = "Weapon: " + rifleController.getWeaponName();
+		pausePanel.transform.GetChild(1).gameObject.GetComponent<Button>().onClick.AddListener(GameManager.instance.onClickContinue);
+		pausePanel.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.AddListener(GameManager.instance.onClickMainMenu);
+		pausePanel.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(GameManager.instance.onClickQuit);
+
+		gameOverPanel.transform.GetChild(1).gameObject.GetComponent<Button>().onClick.AddListener(GameManager.instance.onClickRestart);
+		gameOverPanel.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.AddListener(GameManager.instance.onClickMainMenu);
+		gameOverPanel.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(GameManager.instance.onClickQuit);
 	}
 	
 	// Update is called once per frame

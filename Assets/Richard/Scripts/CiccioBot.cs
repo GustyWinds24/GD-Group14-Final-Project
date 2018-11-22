@@ -54,6 +54,7 @@ public class CiccioBot : Enemy {
 			isDead = true;
 			animator.SetTrigger("CancelAttack");
 			animator.SetTrigger("Dead");
+			disableEffects();
 			agent.enabled = false;
 			Destroy(gameObject, secondsBeforeDestroy);
 			return;
