@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Level2Manager : MonoBehaviour {
 
+    GameObject player;
+    GameObject hud;
+
+    public float dropPoint;
     public GameObject gate1, gate2;
     public GameObject shortcut1, shortcut2;
 
@@ -25,6 +29,7 @@ public class Level2Manager : MonoBehaviour {
     HUDController hudController;
 
 	private void Awake() {
+
         moveGateDown = new Vector3(0, 0.2f, 0);
 		if (instance == null)
         {
@@ -36,11 +41,13 @@ public class Level2Manager : MonoBehaviour {
         }
         soundEffects = GetComponent<AudioSource>();
         hudController = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDController>();
-	}
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
 	// Use this for initialization
 	void Start () {
-		GameManager.instance.setCurrentLevel(2);
+
+        GameManager.instance.setCurrentLevel(2);
 		hudController.setTrial(2);
 		hudController.reset();
 		hudController.displayPrompt(prompt);
@@ -59,6 +66,10 @@ public class Level2Manager : MonoBehaviour {
         if (door2Move == true)
         {
             gate2.transform.position = gate2.transform.position - moveGateDown;
+        }
+        if (player.transform.position.y < dropPoint)
+        {
+            gameOver();
         }
     }
 
@@ -158,6 +169,13 @@ public class Level2Manager : MonoBehaviour {
 	public void unpauseGame() {
 		hudController.disablePauseMenu();
 	}
+
+    public void gameOver()
+    {
+        hudController.gameOver();
+        //Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
+        Time.timeScale = 0;
+    }
 
     //public void openShortcut1() { shortcut1.GetComponent<Animator>().SetTrigger("open"); }
     //public void openShortcut2() { shortcut2.GetComponent<Animator>().SetTrigger("open"); }

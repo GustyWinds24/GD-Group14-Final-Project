@@ -19709,6 +19709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d24e04ba138051942b28bba7da19d671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropPoint: -20
   gate1: {fileID: 1888995768}
   gate2: {fileID: 559856369}
   shortcut1: {fileID: 0}
