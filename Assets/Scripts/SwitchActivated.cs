@@ -28,7 +28,6 @@ public class SwitchActivated : MonoBehaviour {
         }
         else if (switchActivated == true)
         {
-            audio.Play();
             activatedObject.transform.position += direction;
         }
     }
@@ -38,6 +37,7 @@ public class SwitchActivated : MonoBehaviour {
         if (collider.CompareTag("Player"))
         {
             switchActivated = true;
+            audio.Play();
             gameObject.GetComponent<MeshRenderer>().materials[0].color = Color.red;
         }
     }
