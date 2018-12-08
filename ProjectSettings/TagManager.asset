@@ -24,10 +24,6 @@ TagManager:
   - DamageBottle
   - Medbox
   - TestCube
-  - TurnAroundBlock
-  - TurnAroundBlock2
-  - SecondBlock
-  - FirstBlock
   layers:
   - Default
   - TransparentFX

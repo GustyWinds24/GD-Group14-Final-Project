@@ -42,7 +42,6 @@ public class Level1Manager : MonoBehaviour {
 
 	private void Start() {
 		Time.timeScale = 0;
-		//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
 		level1Music.Play();
 		GameManager.instance.setCurrentLevel(1);
 		hudController.setTrial(1);
@@ -159,12 +158,10 @@ public class Level1Manager : MonoBehaviour {
 	public void onClickPrompt () {
 		hudController.disablePrompt();
 		Time.timeScale = 1;
-		//Debug.Log(string.Format("{0} is setting timeScale to 1", gameObject.name));
 	}
 
 	public void gameOver() {
 		Time.timeScale = 0;
-		//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
 		hudController.gameOver();
 	}
 

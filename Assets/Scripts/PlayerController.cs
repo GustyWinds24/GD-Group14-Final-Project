@@ -175,21 +175,4 @@ public class PlayerController : MonoBehaviour {
         GUI.Label(new Rect(0, 0, 500, 20), path.ToString());
         GUI.Label(new Rect(0, 20, 500, 20), cameraAngle.ToString());
     }
-
-    private void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.CompareTag("FirstBlock") || collider.gameObject.CompareTag("SecondBlock"))
-        {
-            gameObject.transform.parent = collider.gameObject.transform;
-            Debug.Log("Player On Platform");
-        }
-    }
-
-    private void OnTriggerExit(Collider collider)
-    {
-        if (collider.gameObject.CompareTag("FirstBlock") || collider.gameObject.CompareTag("SecondBlock"))
-        {
-            gameObject.transform.parent = null;
-        }
-    }
 }

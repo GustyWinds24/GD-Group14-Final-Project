@@ -30,12 +30,6 @@ public class GameManager : MonoBehaviour {
 		soundEffects = GetComponent<AudioSource>();
     }
 
-	private void Start() {
-		//Test to see if this is called on load
-		//Debug.Log("GameManager is calling Start()");
-		Time.timeScale = 1;
-	}
-
 	private void Update() {
 		
 		if (Time.deltaTime == 0) return;
@@ -43,7 +37,6 @@ public class GameManager : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Escape)) {
 			
 			displayPauseMenu();
-			//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
 			Time.timeScale = 0;
 		}
 	}
@@ -60,19 +53,16 @@ public class GameManager : MonoBehaviour {
 
 		disablePauseMenu();
 		Time.timeScale = 1;
-		//Debug.Log(string.Format("{0} is setting timeScale to 1", gameObject.name));
 	}
 
 	public void onClickRestart() {
-		SceneManager.LoadScene("Level" + currentLevel);
-		//Debug.Log(string.Format("{0} is setting timeScale to 1", gameObject.name));
 		Time.timeScale = 1;
+		SceneManager.LoadScene("Level" + currentLevel);
 	}
 
 	public void onClickMainMenu() {
-		SceneManager.LoadScene("MainMenu");
-		//Debug.Log(string.Format("{0} is setting timeScale to 1", gameObject.name));
 		Time.timeScale = 1;
+		SceneManager.LoadScene("MainMenu");
 	}
 
 	public void onClickQuit() {
