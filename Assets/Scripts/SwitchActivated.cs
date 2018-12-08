@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SwitchActivated : MonoBehaviour {
 
+    private AudioSource audio;
+
     public GameObject activatedObject;
     public Vector3 direction;
     private bool switchActivated;
@@ -11,6 +13,7 @@ public class SwitchActivated : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        audio = gameObject.GetComponent<AudioSource>();
         switchActivated = false;
         level2ElevatedPlatform = new Vector3(-4, 0.4f, 8.529f);
     }
@@ -25,6 +28,7 @@ public class SwitchActivated : MonoBehaviour {
         }
         else if (switchActivated == true)
         {
+            audio.Play();
             activatedObject.transform.position += direction;
         }
     }
