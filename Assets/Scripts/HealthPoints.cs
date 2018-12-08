@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class HealthPoints : MonoBehaviour {
 
+	[SerializeField] int fireDamage, particlesBeforeDamage;
+	int particlesHit;
+
     public int myHealth = 100;
     public int maxHealth = 100;
 
@@ -56,6 +59,16 @@ public class HealthPoints : MonoBehaviour {
 	public void collectMedkit(int health) {
 		myHealth += health;
 		if (myHealth > maxHealth) myHealth = maxHealth;
+	}
+
+	private void OnParticleCollision(GameObject other) {
+		
+		particlesHit++;
+		if (particlesHit >= particlesBeforeDamage) {
+			removeHealth(fireDamage);
+			particlesHit = 0;
+		}
+		Debug.Log("Player is hit with fire");
 	}
 
 	public GameObject getTarget() {return target;}

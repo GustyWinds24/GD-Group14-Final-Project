@@ -80,7 +80,7 @@ public class TutorialManager : MonoBehaviour {
 		hudController = hud.GetComponent<HUDController>();
 		countDownTimerText = countDownTimerPanel.transform.GetChild(0).gameObject.GetComponent<Text>();
 
-		string hudName = hudController == null ? "null" : hudController.name;
+		//string hudName = hudController == null ? "null" : hudController.name;
 		//Debug.Log(string.Format("hudController name == {0}", hudName));
 		//Debug.Log("TutorialManager is calling Start(). Setting timeScale = 1");
 		Time.timeScale = 1;
