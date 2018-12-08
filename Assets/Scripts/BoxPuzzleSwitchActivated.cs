@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BoxPuzzleSwitchActivated : MonoBehaviour {
 
+    private AudioSource audio;
+
+    public AudioClip switchTrippedSound, openDoorSound;
+
     public GameObject activatedObject;
     public Vector3 direction;
     public GameObject trigger1;
@@ -11,13 +15,16 @@ public class BoxPuzzleSwitchActivated : MonoBehaviour {
     private bool trigger1Bool;
     private bool trigger2Bool;
     private bool switchActivated;
+    private bool openDoorAudioTrip;
 
     // Use this for initialization
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         switchActivated = false;
         trigger1Bool = false;
         trigger2Bool = false;
+        openDoorAudioTrip = true;
     }
 
     // Update is called once per frame
@@ -31,11 +38,18 @@ public class BoxPuzzleSwitchActivated : MonoBehaviour {
         {
             Debug.Log("1st door down");
             activatedObject.transform.position += direction;
+            if(openDoorAudioTrip == true)
+            {
+                audio.clip = openDoorSound;
+                audio.Play();
+                openDoorAudioTrip = false;
+            }
         }
     }
 
     private void OnTriggerEnter(Collider collider)
     {
+        audio.clip = switchTrippedSound;
         if (collider.CompareTag("Box2"))
         {
             trigger1.GetComponent<BoxPuzzleSwitchActivated>().trigger1Bool = true;
@@ -43,5 +57,6 @@ public class BoxPuzzleSwitchActivated : MonoBehaviour {
         {
             trigger1.GetComponent<BoxPuzzleSwitchActivated>().trigger2Bool = true;
         }
+        audio.Play();
     }
 }

@@ -183,11 +183,20 @@ public class PlayerController : MonoBehaviour {
             gameObject.transform.parent = collider.gameObject.transform;
             Debug.Log("Player On Platform");
         }
+        if (collider.gameObject.CompareTag("SecondBlock"))
+        {
+            gameObject.transform.parent = collider.gameObject.transform;
+            Debug.Log("Player On Platform");
+        }
     }
 
     private void OnTriggerExit(Collider collider)
     {
         if (collider.gameObject.CompareTag("FirstBlock") || collider.gameObject.CompareTag("SecondBlock"))
+        {
+            gameObject.transform.parent = null;
+        }
+        if (collider.gameObject.CompareTag("SecondBlock"))
         {
             gameObject.transform.parent = null;
         }

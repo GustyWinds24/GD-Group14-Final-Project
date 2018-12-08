@@ -17,7 +17,7 @@ public class Level2Manager : MonoBehaviour {
     bool door1Move = false, door2Move = false;
 
 
-    string prompt = "Welcome to the second trial. Smaller but tougher with all those enemies around." +
+    string prompt = "Welcome to the second trial. Smaller but tougher with all those enemies around. " +
                     "Remember to push boxes whenever you feel like you're stuck! Same as before " +
                     "gather intel, kill some enemies and find the way up to the next trial.";
 
