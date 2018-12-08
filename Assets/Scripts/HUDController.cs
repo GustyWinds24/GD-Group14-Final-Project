@@ -42,7 +42,6 @@ public class HUDController : MonoBehaviour {
 		playerHealth = player.GetComponent<HealthPoints>();
 		rifleController = player.GetComponent<RifleController>();
 		promptText = promptPanel.transform.GetChild(0).gameObject.GetComponent<Text>();
-
 	}
 
 	// Use this for initialization
