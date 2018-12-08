@@ -6,8 +6,8 @@ public class BoxPuzzleSwitchActivated : MonoBehaviour {
 
     public GameObject activatedObject;
     public Vector3 direction;
-    private GameObject trigger1;
-    private GameObject trigger2;
+    public GameObject trigger1;
+    public GameObject trigger2;
     private bool trigger1Bool;
     private bool trigger2Bool;
     private bool switchActivated;
@@ -15,8 +15,8 @@ public class BoxPuzzleSwitchActivated : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        trigger1 = GameObject.FindGameObjectWithTag("Trigger1");
-        trigger2 = GameObject.FindGameObjectWithTag("Trigger2");
+        //trigger1 = GameObject.FindGameObjectWithTag("Trigger1");
+        //trigger2 = GameObject.FindGameObjectWithTag("Trigger2");
         switchActivated = false;
         trigger1Bool = false;
         trigger2Bool = false;
@@ -31,6 +31,7 @@ public class BoxPuzzleSwitchActivated : MonoBehaviour {
         }
         if (switchActivated == true && gameObject.CompareTag("Trigger1") == true)
         {
+            Debug.Log("1st door down");
             activatedObject.transform.position += direction;
         }
     }
