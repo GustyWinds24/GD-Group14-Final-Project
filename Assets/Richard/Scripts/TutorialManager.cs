@@ -74,10 +74,16 @@ public class TutorialManager : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag("Player");
 		hud = GameObject.FindGameObjectWithTag("HUD");
 	}
+
 	// Use this for initialization
 	void Start () {
 		hudController = hud.GetComponent<HUDController>();
 		countDownTimerText = countDownTimerPanel.transform.GetChild(0).gameObject.GetComponent<Text>();
+
+		string hudName = hudController == null ? "null" : hudController.name;
+		//Debug.Log(string.Format("hudController name == {0}", hudName));
+		//Debug.Log("TutorialManager is calling Start(). Setting timeScale = 1");
+		Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame
@@ -107,14 +113,16 @@ public class TutorialManager : MonoBehaviour {
 
 	public void displayPrompt(int num) {
 
-		Time.timeScale = 0;
 		hudController.displayPrompt(prompt[num]);
 		if (num == 7) startTutorialTimer();
+		Time.timeScale = 0;
+		//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
 	}
 
 	public void disablePrompt() {
 		hudController.disablePrompt();
 		Time.timeScale = 1;
+		//Debug.Log(string.Format("{0} is setting timeScale to 1", gameObject.name));
 	}
 
 	public void startTutorialTimer() {
@@ -126,6 +134,7 @@ public class TutorialManager : MonoBehaviour {
 	public void gameOver() {
 		countDownTimerPanel.SetActive(false);
 		hudController.gameOver();
+		//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
 		Time.timeScale = 0;
 	}
 

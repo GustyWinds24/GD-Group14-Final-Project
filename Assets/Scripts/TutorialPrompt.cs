@@ -11,6 +11,7 @@ public class TutorialPrompt : MonoBehaviour {
     {
         if (collider.CompareTag("Player"))
         {
+			//Debug.Log(string.Format("Player is triggering: prompt {0}", myNumber));
             TutorialManager.instance.displayPrompt(myNumber);
         }
     }
