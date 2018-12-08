@@ -29,4 +29,13 @@ public class SwitchActivated : MonoBehaviour {
             gameObject.GetComponent<MeshRenderer>().materials[0].color = Color.red;
         }
     }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.CompareTag("Player"))
+        {
+            switchActivated = true;
+            gameObject.GetComponent<MeshRenderer>().materials[0].color = Color.red;
+        }
+    }
 }
