@@ -28,6 +28,7 @@ public class Level2Manager : MonoBehaviour {
 		hudController.setTrial(2);
 		hudController.reset();
 		hudController.displayPrompt(prompt);
+		Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame

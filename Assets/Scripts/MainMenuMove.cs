@@ -16,6 +16,7 @@ public class MainMenuMove : MonoBehaviour {
     void Start () {
         TutLevel = "Level0";
         LoadGame = "LoadScreen";
+		Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame
