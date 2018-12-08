@@ -15,8 +15,6 @@ public class BoxPuzzleSwitchActivated : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        //trigger1 = GameObject.FindGameObjectWithTag("Trigger1");
-        //trigger2 = GameObject.FindGameObjectWithTag("Trigger2");
         switchActivated = false;
         trigger1Bool = false;
         trigger2Bool = false;

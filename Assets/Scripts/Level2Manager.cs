@@ -142,6 +142,11 @@ public class Level2Manager : MonoBehaviour {
         soundEffects.Play();
     }
 
+    public void levelComplete()
+    {
+        GameManager.instance.loadLevel((GameManager.instance.getCurrentLevel() + 1));
+    }
+
     public void onClickPrompt() {
 		hudController.disablePrompt();
 	}
