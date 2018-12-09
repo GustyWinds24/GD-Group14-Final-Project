@@ -92,7 +92,15 @@ public class GameManager : MonoBehaviour {
 			case 1:
 				Level1Manager.instance.gameOver();
 				break;
-		}
+
+            case 2:
+                Level2Manager.instance.gameOver();
+                break;
+
+            case 3:
+                //Level3Manager.instance.gameOver();
+                break;
+        }
 	}
 
 	public void playMedkitSound() {
