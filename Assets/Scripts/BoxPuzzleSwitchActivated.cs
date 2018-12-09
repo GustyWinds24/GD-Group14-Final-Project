@@ -36,7 +36,7 @@ public class BoxPuzzleSwitchActivated : MonoBehaviour {
         }
         if (switchActivated == true && gameObject.CompareTag("Trigger1") == true)
         {
-            Debug.Log("1st door down");
+            //Debug.Log("1st door down");
             activatedObject.transform.position += direction;
             if(openDoorAudioTrip == true)
             {

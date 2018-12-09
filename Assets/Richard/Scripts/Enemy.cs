@@ -21,6 +21,13 @@ public class Enemy : MonoBehaviour {
 	public virtual void takeDamage(int damage) {
 		if (isDead) return;
 		health -= damage;
-		if (health <= 0) health = 0;
+		if (health <= 0) {
+			health = 0;
+			var colliders = GetComponents<Collider>();
+			foreach (Collider c in colliders) {
+				Debug.Log(string.Format("Disabling {0} (Collider)", c.name));
+				c.enabled = false;
+			}
+		}
 	}
 }

@@ -60,7 +60,7 @@ public class Level2Manager : MonoBehaviour {
         if (Time.deltaTime == 0) return;
         if (door1Move == true)
         {
-            Debug.Log("Door going down");
+            //Debug.Log("Door going down");
             gate1.transform.position = gate1.transform.position - moveGateDown;
         }
         if (door2Move == true)
