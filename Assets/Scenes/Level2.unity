@@ -346,6 +346,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &14987670
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1913439278}
+    m_Modifications:
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -12.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.18511896
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 12.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.2484545
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0.5791266
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.19174734
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.75240666
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 14.46514
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 14.465139
+      objectReference: {fileID: 0}
+    - target: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 14.465164
+      objectReference: {fileID: 0}
+    - target: {fileID: 1109660091517474, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+      propertyPath: m_Name
+      value: InvicibilityBagOfChips (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cec3b66ee89d7d84dbca7782850d89d8, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &14987671 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4246579850163084, guid: cec3b66ee89d7d84dbca7782850d89d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 14987670}
 --- !u!1 &29326744
 GameObject:
   m_ObjectHideFlags: 0
@@ -29220,6 +29283,7 @@ Transform:
   - {fileID: 889921257}
   - {fileID: 613670288}
   - {fileID: 1870692699}
+  - {fileID: 14987671}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
