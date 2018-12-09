@@ -23,7 +23,9 @@ public class Level2Manager : MonoBehaviour {
 
     string prompt = "Welcome to the second trial. Smaller but tougher with all those enemies around. " +
                     "Remember to push boxes whenever you feel like you're stuck! Same as before " +
-                    "gather intel, kill some enemies and find the way up to the next trial.";
+                    "gather intel, kill some enemies and find the way up to the next trial. " +
+                    "Also, always look at your surroundings for places to jump and remember every " +
+                    "door you find.";
 
     AudioSource soundEffects;
     HUDController hudController;
