@@ -32,6 +32,8 @@ TagManager:
   - Trigger2
   - Box1
   - Box2
+  - DragonHead
+  - DragonParticles
   layers:
   - Default
   - TransparentFX
