@@ -6,22 +6,37 @@ public class FloatingPlatformMovement : MonoBehaviour {
 
     public Vector3 direction;
     public bool otherWay;
+    public float timeBeforeSwitch = 0f;
+    public bool hasReachedMaxWait;
 
     // Use this for initialization
     void Start () {
+        hasReachedMaxWait = true;
         otherWay = false;
 	}
 
     // Update is called once per frame
     void Update()
     {
-        if (otherWay == true)
+        if (hasReachedMaxWait == true)
         {
-            transform.position -= direction;
+            if (otherWay == true)
+            {
+                transform.position -= direction;
+            }
+            else
+            {
+                transform.position += direction;
+            }
         }
         else
         {
-            transform.position += direction;
+            timeBeforeSwitch += Time.deltaTime;
+            if(timeBeforeSwitch >= 2f)
+            {
+                hasReachedMaxWait = true;
+                timeBeforeSwitch = 0f;
+            }
         }
     }
 
@@ -36,10 +51,12 @@ public class FloatingPlatformMovement : MonoBehaviour {
         {
             if (otherWay == true)
             {
+                hasReachedMaxWait = false;
                 otherWay = false;
             }
             else
             {
+                hasReachedMaxWait = false;
                 otherWay = true;
             }
             Debug.Log("TurnAroundBlock1touched");
@@ -48,10 +65,12 @@ public class FloatingPlatformMovement : MonoBehaviour {
         {
             if (otherWay == true)
             {
+                hasReachedMaxWait = false;
                 otherWay = false;
             }
             else
             {
+                hasReachedMaxWait = false;
                 otherWay = true;
             }
         }
@@ -72,10 +91,12 @@ public class FloatingPlatformMovement : MonoBehaviour {
             Debug.Log("platform hit block");
             if (otherWay == true)
             {
+                hasReachedMaxWait = false;
                 otherWay = false;
             }
             else
             {
+                hasReachedMaxWait = false;
                 otherWay = true;
             }
         }
