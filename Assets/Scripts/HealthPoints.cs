@@ -7,15 +7,30 @@ public class HealthPoints : MonoBehaviour {
 
     public int myHealth = 100;
     public int maxHealth = 100;
+    public int oldHealth;
+    private float invincibilityTimer = 0f;
+    private bool invincibilityMode;
 
 	GameObject target;
 
 	private void Awake() {
+        invincibilityMode = false;
 		target = transform.GetChild(5).gameObject;
 	}
 
 	// Update is called once per frame
 	void Update () {
+        if(invincibilityMode == true)
+        {
+            myHealth = maxHealth;
+            invincibilityTimer += Time.deltaTime;
+            if (invincibilityTimer >= 10)
+            {
+                myHealth = oldHealth;
+                invincibilityMode = false;
+                invincibilityTimer = 0f;
+            }
+        }
 		if(myHealth == 0)
         {
             GameManager.instance.gameOver();
@@ -59,4 +74,10 @@ public class HealthPoints : MonoBehaviour {
 	}
 
 	public GameObject getTarget() {return target;}
+
+    public void InvincibilityPowerUp()
+    {
+        oldHealth = myHealth;
+        invincibilityMode = true;
+    }
 }

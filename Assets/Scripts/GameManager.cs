@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
 
 	public AudioClip medkitAudio;
 	public AudioClip DamageBottleSound;
+    public AudioClip fastCanSound;
+    public AudioClip invincibleChipsSound;
 	public AudioClip scanning;
 
     int currentLevel;
@@ -103,7 +105,19 @@ public class GameManager : MonoBehaviour {
 		soundEffects.Play();
 	}
 
-	public void playScanningSound() {
+    public void playFastCanSound()
+    {
+        soundEffects.clip = fastCanSound;
+        soundEffects.Play();
+    }
+
+    public void playInvincibleChipsSound()
+    {
+        soundEffects.clip = invincibleChipsSound;
+        soundEffects.Play();
+    }
+
+    public void playScanningSound() {
 		soundEffects.clip = scanning;
 		soundEffects.Play();
 	}
