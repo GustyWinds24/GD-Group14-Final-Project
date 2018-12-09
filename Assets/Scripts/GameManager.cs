@@ -9,7 +9,11 @@ public class GameManager : MonoBehaviour {
 
 	public AudioClip medkitAudio;
 	public AudioClip DamageBottleSound;
+    public AudioClip fastCanSound;
+    public AudioClip invincibleChipsSound;
 	public AudioClip scanning;
+
+	[SerializeField] AudioClip lockedDoor;
 
     int currentLevel;
 
@@ -60,19 +64,14 @@ public class GameManager : MonoBehaviour {
 
 		disablePauseMenu();
 		Time.timeScale = 1;
-		//Debug.Log(string.Format("{0} is setting timeScale to 1", gameObject.name));
 	}
 
 	public void onClickRestart() {
 		SceneManager.LoadScene("Level" + currentLevel);
-		//Debug.Log(string.Format("{0} is setting timeScale to 1", gameObject.name));
-		Time.timeScale = 1;
 	}
 
 	public void onClickMainMenu() {
 		SceneManager.LoadScene("MainMenu");
-		//Debug.Log(string.Format("{0} is setting timeScale to 1", gameObject.name));
-		Time.timeScale = 1;
 	}
 
 	public void onClickQuit() {
@@ -90,6 +89,14 @@ public class GameManager : MonoBehaviour {
 			case 1:
 				Level1Manager.instance.gameOver();
 				break;
+
+			case 2:
+				Level2Manager.instance.gameOver();
+				break;
+
+			case 3:
+				Level3Manager.instance.gameOver();
+				break;
 		}
 	}
 
@@ -103,8 +110,25 @@ public class GameManager : MonoBehaviour {
 		soundEffects.Play();
 	}
 
-	public void playScanningSound() {
+    public void playFastCanSound()
+    {
+        soundEffects.clip = fastCanSound;
+        soundEffects.Play();
+    }
+
+    public void playInvincibleChipsSound()
+    {
+        soundEffects.clip = invincibleChipsSound;
+        soundEffects.Play();
+    }
+
+    public void playScanningSound() {
 		soundEffects.clip = scanning;
+		soundEffects.Play();
+	}
+
+	public void playLockedDoorSound() {
+		soundEffects.clip = lockedDoor;
 		soundEffects.Play();
 	}
 

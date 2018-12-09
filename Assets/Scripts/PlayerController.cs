@@ -3,12 +3,14 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-    private Animator animator;
+    public Animator animator;
     private CharacterController chrContr;
     private float angle;
     private float rotVelocity;
     private float lastAngle;
     private float gravity;
+    private float oldAnimationSpeed;
+    private float fasterRunTimer = 0f;
     //private bool justStartedFalling = true;
     bool moving;
     bool crouching;
@@ -37,6 +39,7 @@ public class PlayerController : MonoBehaviour {
     Transform cameraTransform;
 
 	private void Awake() {
+        oldAnimationSpeed = 1;
 		animator = gameObject.GetComponent<Animator>();
         chrContr = gameObject.GetComponent<CharacterController>();
         grenadeProp = Resources.Load("Prefabs/GrenadeProp") as GameObject;
@@ -132,6 +135,16 @@ public class PlayerController : MonoBehaviour {
         {
             //animator.SetBool("Jumping", false);
         }
+
+        if(animator.speed != oldAnimationSpeed)
+        {
+            fasterRunTimer += Time.deltaTime;
+            if (fasterRunTimer >= 10)
+            {
+                animator.speed = oldAnimationSpeed;
+                fasterRunTimer = 0f;
+            }
+        }
 	}
 
     IEnumerator Jump()
@@ -183,6 +196,11 @@ public class PlayerController : MonoBehaviour {
             gameObject.transform.parent = collider.gameObject.transform;
             Debug.Log("Player On Platform");
         }
+        if (collider.gameObject.CompareTag("SecondBlock"))
+        {
+            gameObject.transform.parent = collider.gameObject.transform;
+            Debug.Log("Player On Platform");
+        }
     }
 
     private void OnTriggerExit(Collider collider)
@@ -191,5 +209,14 @@ public class PlayerController : MonoBehaviour {
         {
             gameObject.transform.parent = null;
         }
+        if (collider.gameObject.CompareTag("SecondBlock"))
+        {
+            gameObject.transform.parent = null;
+        }
+    }
+
+    public void changeAnimationSpeed()
+    {
+        animator.speed = 2.5f;
     }
 }

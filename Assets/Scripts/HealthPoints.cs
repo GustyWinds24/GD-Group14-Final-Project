@@ -6,23 +6,37 @@ using UnityEngine.UI;
 public class HealthPoints : MonoBehaviour {
 
 	[SerializeField] int fireDamage, particlesBeforeDamage;
+	[SerializeField] int deathY;
 	int particlesHit;
 
     public int myHealth = 100;
     public int maxHealth = 100;
+    public int oldHealth;
+    private float invincibilityTimer = 0f;
+    private bool invincibilityMode;
 
 	GameObject target;
 
 	private void Awake() {
+        invincibilityMode = false;
 		target = transform.GetChild(5).gameObject;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if(myHealth == 0)
+        if(invincibilityMode == true)
         {
-            GameManager.instance.gameOver();
+            myHealth = maxHealth;
+            invincibilityTimer += Time.deltaTime;
+            if (invincibilityTimer >= 10)
+            {
+                myHealth = oldHealth;
+                invincibilityMode = false;
+                invincibilityTimer = 0f;
+            }
         }
+		if (myHealth == 0) GameManager.instance.gameOver();
+		if (transform.position.y <= deathY) GameManager.instance.gameOver();
 	}
 
     public void addHealth(int health)
@@ -68,8 +82,14 @@ public class HealthPoints : MonoBehaviour {
 			removeHealth(fireDamage);
 			particlesHit = 0;
 		}
-		Debug.Log("Player is hit with fire");
+		//Debug.Log("Player is hit with fire");
 	}
 
 	public GameObject getTarget() {return target;}
+
+    public void InvincibilityPowerUp()
+    {
+        oldHealth = myHealth;
+        invincibilityMode = true;
+    }
 }

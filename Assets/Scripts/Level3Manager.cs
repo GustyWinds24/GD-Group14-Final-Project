@@ -8,7 +8,13 @@ public class Level3Manager : MonoBehaviour {
 
 	string prompt = "Level3 Prompt";
 
+	[SerializeField] GameObject artifactDoor;
+	[SerializeField] AudioClip artifactDoorAudioClip;
+
+	AudioSource soundEffects;
 	HUDController hudController;
+
+	[HideInInspector] public bool dragonDead;
 
 	private void Awake() {
 		if (instance == null)
@@ -19,7 +25,9 @@ public class Level3Manager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
 		hudController = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDController>();
+		soundEffects = GetComponent<AudioSource>();
 	}
 
 	// Use this for initialization
@@ -46,5 +54,24 @@ public class Level3Manager : MonoBehaviour {
 
 	public void unpauseGame() {
 		hudController.disablePauseMenu();
+	}
+
+	public void gameOver() {
+
+		Time.timeScale = 0;
+		//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
+		hudController.gameOver();
+	}
+
+	public bool tryToOpenArtifactDoor() {
+		if (!dragonDead) {
+			GameManager.instance.playLockedDoorSound();
+			return false;
+		}
+
+		soundEffects.clip = artifactDoorAudioClip;
+		soundEffects.Play();
+		artifactDoor.GetComponent<Animator>().SetTrigger("open");
+		return true;
 	}
 }

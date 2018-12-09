@@ -28,6 +28,9 @@ TagManager:
   - TurnAroundBlock2
   - SecondBlock
   - FirstBlock
+  - Undefined
+  - DragonParticles
+  - DragonHead
   layers:
   - Default
   - TransparentFX

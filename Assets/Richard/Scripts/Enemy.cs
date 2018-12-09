@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour {
 	protected bool sink = false;
 	protected float sinkSpeed = 2.5f;
 
-	public void takeDamage(int damage) {
+	public virtual void takeDamage(int damage) {
 		if (isDead) return;
 		health -= damage;
 		if (health <= 0) health = 0;

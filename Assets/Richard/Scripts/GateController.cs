@@ -23,7 +23,7 @@ public class GateController : MonoBehaviour {
         {
 
             case "Player":
-                opened = Level1Manager.instance.tryToOpenGate(gate);
+                opened = Level3Manager.instance.tryToOpenArtifactDoor();
                 break;
         }
         if (opened) BoxCollider.Destroy(myCollider);

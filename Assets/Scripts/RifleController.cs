@@ -90,7 +90,7 @@ public class RifleController : MonoBehaviour
 			gunLine.SetPosition(1, hit.point);
 			gunLine.enabled = true;
 			effectsOn = true;
-			Debug.Log(string.Format("Raycast is hitting {0}", hit.collider.name));
+			//Debug.Log(string.Format("Raycast is hitting {0}", hit.collider.name));
         }
 
 		timer = 0f;
