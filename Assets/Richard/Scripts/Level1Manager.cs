@@ -24,11 +24,14 @@ public class Level1Manager : LevelManager {
 					"intel we believe is on this floor. The code to get to the stairs is on one of the " +
 					"documents. The intel is vital to our future operations. Stay alive soldier.";
 
+	bool notFirstLoad;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+			notFirstLoad = true;
         }
         else if (instance != this)
         {
@@ -36,12 +39,16 @@ public class Level1Manager : LevelManager {
         }
 
 		soundEffects = GetComponent<AudioSource>();
+		myLevel = 1;
     }
 
 	new void Start() {
+		//For prompts
 		Time.timeScale = 0;
-		//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
+		
+		//Must come before updating level
 		base.Start();
+
 		level1Music.Play();
 		GameManager.instance.setCurrentLevel(1);
 		hudController.setTrial(1);
@@ -150,7 +157,7 @@ public class Level1Manager : LevelManager {
 	}
 	
 	public void levelComplete() {
-		GameManager.instance.loadLevel((GameManager.instance.getCurrentLevel() + 1));
+		GameManager.instance.nextLevel();
 	}
 
 	public void onClickPrompt () {

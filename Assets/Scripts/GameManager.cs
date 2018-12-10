@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour {
 	AudioSource soundEffects;
 	HUDController hud;
 
-	int levelStartingPoints;
+	public bool playerBeatLevel;
+	[HideInInspector] public int levelStartingPoints;
 	string highScore = "HighestScore";
 
     private void Awake()
@@ -87,6 +88,14 @@ public class GameManager : MonoBehaviour {
 
 		disablePauseMenu();
 		Time.timeScale = 1;
+	}
+
+	//Only call this when player completes level
+	public void nextLevel() {
+
+		playerBeatLevel = true;
+		GameManager.instance.saveLevelStartPoints();
+		loadLevel(currentLevel + 1);
 	}
 
 	public void onClickRestart() {
@@ -244,6 +253,29 @@ public class GameManager : MonoBehaviour {
 				Level3Manager.instance.unpauseGame();
 				break;
 		}
+	}
+
+	public void saveLevelStartPoints() {
+		levelStartingPoints = points;
+	}
+
+	public void reloadLevelStartPoints() {
+		points = levelStartingPoints;
+	}
+
+	public bool checkRestartingLevel(int level) {
+		bool restart = false;
+		if (level == currentLevel) {
+
+			points = levelStartingPoints;
+			restart = true;
+		}
+		return restart;
+	}
+
+	public void resetScores() {
+		points = 0;
+		levelStartingPoints = 0;
 	}
 
 	public void setHUDReference(HUDController hud) {this.hud = hud;}

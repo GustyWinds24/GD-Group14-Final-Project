@@ -11,8 +11,7 @@ public class GoToNextLevel : MonoBehaviour {
     {
         if (collider.CompareTag("Player"))
         {
-            SceneManager.LoadScene(nextLevelName);
-			GameManager.instance.setCurrentLevel(1);
+			GameManager.instance.nextLevel();
         }
     }
 }

@@ -72,6 +72,7 @@ public class TutorialManager : LevelManager {
 
 		player = GameObject.FindGameObjectWithTag("Player");
 		hud = GameObject.FindGameObjectWithTag("HUD");
+		myLevel = 0;
 	}
 
 	// Use this for initialization

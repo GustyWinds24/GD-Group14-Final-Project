@@ -46,11 +46,13 @@ public class Level3Manager : LevelManager {
         }
 
 		soundEffects = GetComponent<AudioSource>();
+		myLevel = 3;
 	}
 
 	// Use this for initialization
 	new void Start () {
 
+		//Must come before updating level
 		base.Start();
 
         winPanel.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.AddListener(GameManager.instance.onClickMainMenu);
@@ -196,6 +198,7 @@ public class Level3Manager : LevelManager {
 		GameManager.instance.doScores();
 		hudController.setGameWonScore();
         winPanel.SetActive(true);
+		GameManager.instance.resetScores();
     }
 
     public bool tryToOpenArtifactDoor() {

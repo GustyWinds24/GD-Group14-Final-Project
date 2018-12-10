@@ -42,12 +42,15 @@ public class Level2Manager : LevelManager {
         }
         soundEffects = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
+		myLevel = 2;
     }
 
 	// Use this for initialization
 	new void Start () {
 
+		//Must come before updating level
 		base.Start();
+
         GameManager.instance.setCurrentLevel(2);
 		hudController.setTrial(2);
 		hudController.displayPrompt(prompt);
@@ -155,7 +158,7 @@ public class Level2Manager : LevelManager {
 
     public void levelComplete()
     {
-        GameManager.instance.loadLevel((GameManager.instance.getCurrentLevel() + 1));
+		GameManager.instance.nextLevel();
     }
 
     public void onClickPrompt() {
