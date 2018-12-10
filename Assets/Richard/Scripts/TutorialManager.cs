@@ -23,7 +23,7 @@ public class TutorialManager : LevelManager {
 	string[] prompt =	{
 					"Welcome to the tutorial of Trials of the Floating Tower. Here you will learn some of the basics to be able to beat a level. " +
 					"First off, use the WASD keys in order to move around. Click the left mouse button to fire your rifle. Click the right mouse button to " +
-					"throw a grenade. You have unlimited ammo. Use the Escape key to pause the game. " +
+					"throw a grenade. You have unlimited ammo. Press Esc to pause. " +
 					"Rotate with the mouse. Click Ok to begin. W - Move up  A - Move left  S - Move down  D - Move right " +
 					"Esc - pause the game",
 
