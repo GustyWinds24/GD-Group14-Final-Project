@@ -22,7 +22,9 @@ public class Level1Manager : LevelManager {
 	string prompt = "This is your first trial. You've stumbled into one of the alien barracks. " + 
 					"Don't take it as lightly as you did outside. We need you to gather some valuable " +
 					"intel we believe is on this floor. The code to get to the stairs is on one of the " +
-					"documents. The intel is vital to our future operations. Stay alive soldier.";
+					"documents. The intel is vital to our future operations and we believe there is two. " +
+                    "The intel are visualized as a shining piece of paper. Check out desks and tables for " +
+                    "them. Stay alive soldier.";
 
     private void Awake()
     {

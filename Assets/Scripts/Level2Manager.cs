@@ -23,9 +23,9 @@ public class Level2Manager : LevelManager {
 
     string prompt = "Welcome to the second trial. Smaller but tougher with all those enemies around. " +
                     "Remember to push boxes whenever you feel like you're stuck! Same as before " +
-                    "gather intel, kill some enemies and find the way up to the next trial. " +
+                    "but no intel collecting this time just keys, kill some enemies and find the way up to the next trial. " +
                     "Also, always look at your surroundings for places to jump and remember every " +
-                    "door you find.";
+                    "door you find. Don't die.";
 
     AudioSource soundEffects;
 
