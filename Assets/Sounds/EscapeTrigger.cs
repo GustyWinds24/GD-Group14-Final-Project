@@ -5,6 +5,7 @@ using UnityEngine;
 public class EscapeTrigger : MonoBehaviour {
 
     public AudioClip escapeSound;
+    public GameObject escapeEnemies;
     private AudioSource cameraAudio;
     private AudioSource triggerAudio;
     private AudioSource audio;
@@ -34,6 +35,8 @@ public class EscapeTrigger : MonoBehaviour {
     {
         if (other.CompareTag("Player") && artifactIsGot == true)
         {
+            Level3Manager.instance.startLevel3Timer();
+            escapeEnemies.SetActive(true);
             key1.SetActive(true);
             key2.SetActive(true);
             key3.SetActive(true);

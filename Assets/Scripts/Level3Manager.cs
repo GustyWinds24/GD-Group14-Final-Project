@@ -1,11 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Level3Manager : LevelManager {
 
+    public GameObject winPanel;
     public GameObject gate1;
     public static Level3Manager instance;
+
+    //Only grabbing this panel because it is scene specific
+    public GameObject countDownTimerPanel;
+
+    bool level3TimerOn = false;
+    int seconds = 180;
+    float level3Timer = 0f;
+
+    Text countDownTimerText;
 
     bool hasKey1 = false, hasKey2 = false, hasKey3 = false;
     public AudioClip pickUpKeySound, openDoorSound, lockedDoorSound;
@@ -39,8 +50,14 @@ public class Level3Manager : LevelManager {
 
 	// Use this for initialization
 	new void Start () {
+
 		base.Start();
-		GameManager.instance.setCurrentLevel(3);
+
+        winPanel.transform.GetChild(2).gameObject.GetComponent<Button>().onClick.AddListener(GameManager.instance.onClickMainMenu);
+        winPanel.transform.GetChild(3).gameObject.GetComponent<Button>().onClick.AddListener(GameManager.instance.onClickQuit);
+        countDownTimerText = countDownTimerPanel.transform.GetChild(0).gameObject.GetComponent<Text>();
+
+        GameManager.instance.setCurrentLevel(3);
 		hudController.setTrial(3);
 		hudController.displayPrompt(prompt);
 		Time.timeScale = 1;
@@ -49,7 +66,31 @@ public class Level3Manager : LevelManager {
 	// Update is called once per frame
 	void Update () {
 		if (Time.deltaTime == 0) return;
-	}
+
+        if (level3TimerOn)
+        {
+            countDownTimerPanel.SetActive(true);
+            level3Timer += Time.deltaTime;
+            if (level3Timer >= 1)
+            {
+                seconds--;
+                level3Timer = 0f;
+                countDownTimerText.text = string.Format("{0}", seconds);
+            }
+            if (seconds <= 0)
+            {
+                level3TimerOn = false;
+                countDownTimerPanel.SetActive(false);
+                GameManager.instance.gameOver();
+            }
+        }
+    }
+
+    public void startLevel3Timer()
+    {
+        countDownTimerPanel.SetActive(true);
+        level3TimerOn = true;
+    }
 
     public bool getHasKey1() { return hasKey1; }
     public bool getHasKey2() { return hasKey2; }
@@ -149,7 +190,15 @@ public class Level3Manager : LevelManager {
 		hudController.gameOver();
 	}
 
-	public bool tryToOpenArtifactDoor() {
+    public void wonGame()
+    {
+
+        Time.timeScale = 0;
+        //Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
+        winPanel.SetActive(true);
+    }
+
+    public bool tryToOpenArtifactDoor() {
 		if (!dragonDead) {
 			GameManager.instance.playLockedDoorSound();
 			return false;
