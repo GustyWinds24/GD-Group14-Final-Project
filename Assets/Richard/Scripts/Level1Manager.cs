@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level1Manager : MonoBehaviour {
+public class Level1Manager : LevelManager {
 
 	public GameObject gate1, gate2, gate3, gate4;
 	public GameObject shortcut1, shortcut2;
 	public GameObject hud;
-
     public AudioClip pickUpKeySound, openDoorSound, lockedDoorSound;
-
 	public AudioSource level1Music;
+
+	[SerializeField] GameObject alarm;
 
     public static Level1Manager instance;
 
@@ -18,7 +18,6 @@ public class Level1Manager : MonoBehaviour {
 	short intel = 0;
 
 	AudioSource soundEffects;
-	HUDController hudController;
 
 	string prompt = "This is your first trial. You've stumbled into one of the alien barracks. " + 
 					"Don't take it as lightly as you did outside. We need you to gather some valuable " +
@@ -37,23 +36,21 @@ public class Level1Manager : MonoBehaviour {
         }
 
 		soundEffects = GetComponent<AudioSource>();
-		hudController = hud.gameObject.GetComponent<HUDController>();
     }
 
-	private void Start() {
+	new void Start() {
 		Time.timeScale = 0;
 		//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
+		base.Start();
 		level1Music.Play();
 		GameManager.instance.setCurrentLevel(1);
 		hudController.setTrial(1);
-		hudController.reset();
 		hudController.displayPrompt(prompt);
 	}
 
 	private void Update()
     {
 		if (Time.deltaTime == 0) return;
-
     }
 
     public bool getHasKey1 () { return hasKey1; }

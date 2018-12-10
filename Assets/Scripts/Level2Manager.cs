@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level2Manager : MonoBehaviour {
+public class Level2Manager : LevelManager {
 
     GameObject player;
     GameObject hud;
@@ -28,7 +28,6 @@ public class Level2Manager : MonoBehaviour {
                     "door you find.";
 
     AudioSource soundEffects;
-    HUDController hudController;
 
 	private void Awake() {
 
@@ -42,16 +41,15 @@ public class Level2Manager : MonoBehaviour {
             Destroy(gameObject);
         }
         soundEffects = GetComponent<AudioSource>();
-        hudController = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDController>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
 	// Use this for initialization
-	void Start () {
+	new void Start () {
 
+		base.Start();
         GameManager.instance.setCurrentLevel(2);
 		hudController.setTrial(2);
-		hudController.reset();
 		hudController.displayPrompt(prompt);
 		Time.timeScale = 1;
 	}

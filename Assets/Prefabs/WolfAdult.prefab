@@ -469,7 +469,6 @@ GameObject:
   - component: {fileID: 136631924103574652}
   - component: {fileID: 195441420663760276}
   - component: {fileID: 114074917519266704}
-  - component: {fileID: 114223461622716988}
   m_Layer: 0
   m_Name: WolfAdult
   m_TagString: Enemy
@@ -1411,21 +1410,8 @@ MonoBehaviour:
   health: 25
   maxHealth: 25
   strength: 15
---- !u!114 &114223461622716988
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1646176416045644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 111e5870229836d488bf90b1bda6ded5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyName: Otherworldly Mutt (Adult)
-  health: 25
-  maxHealth: 25
-  strength: 15
+  secondsBeforeDestroy: 7
+  pointValue: 100
 --- !u!135 &135585516738064242
 SphereCollider:
   m_ObjectHideFlags: 1

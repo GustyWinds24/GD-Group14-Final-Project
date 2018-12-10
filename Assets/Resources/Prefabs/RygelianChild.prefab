@@ -1702,6 +1702,7 @@ MonoBehaviour:
   maxHealth: 50
   strength: 10
   secondsBeforeDestroy: 4
+  pointValue: 60
   spawnClip: {fileID: 8300000, guid: 53bf13168f3916243b853c8d6a84d048, type: 3}
   dieClip: {fileID: 8300000, guid: 26267539416686645a60b79d9790db5a, type: 3}
 --- !u!136 &136397642410119860

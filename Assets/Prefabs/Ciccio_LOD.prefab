@@ -2253,6 +2253,8 @@ MonoBehaviour:
   health: 60
   maxHealth: 60
   strength: 25
+  secondsBeforeDestroy: 7
+  pointValue: 250
   timeBetweenShots: 7
   stoppingDistance: 2
   randomDestinationRange: 30

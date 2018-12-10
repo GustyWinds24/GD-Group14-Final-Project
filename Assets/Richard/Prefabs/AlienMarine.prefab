@@ -99,9 +99,9 @@ GameObject:
   - component: {fileID: 136518024792369368}
   - component: {fileID: 136790113645717256}
   - component: {fileID: 195337601525004190}
-  - component: {fileID: 114071839669878164}
   - component: {fileID: 120739910651095622}
   - component: {fileID: 82006937525072504}
+  - component: {fileID: 114071839669878164}
   m_Layer: 0
   m_Name: AlienMarine
   m_TagString: Enemy
@@ -1949,6 +1949,7 @@ MonoBehaviour:
   maxHealth: 40
   strength: 15
   secondsBeforeDestroy: 7
+  pointValue: 60
   timeBetweenShots: 2
 --- !u!120 &120739910651095622
 LineRenderer:

@@ -37,9 +37,9 @@ GameObject:
   - component: {fileID: 195861617899552976}
   - component: {fileID: 136830915118427562}
   - component: {fileID: 136044385008902094}
-  - component: {fileID: 114502736940028572}
   - component: {fileID: 54361806729111598}
   - component: {fileID: 82776936508871082}
+  - component: {fileID: 114502736940028572}
   m_Layer: 0
   m_Name: RygelianCarrier
   m_TagString: Enemy
@@ -1763,6 +1763,7 @@ MonoBehaviour:
   maxHealth: 200
   strength: 5
   secondsBeforeDestroy: 7
+  pointValue: 1000
   randomDestinationRange: 30
   stoppingDistance: 5
   randomDirectionWaitTime: 10

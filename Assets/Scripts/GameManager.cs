@@ -12,12 +12,14 @@ public class GameManager : MonoBehaviour {
     public AudioClip fastCanSound;
     public AudioClip invincibleChipsSound;
 	public AudioClip scanning;
+	public int points;
 
 	[SerializeField] AudioClip lockedDoor;
 
     int currentLevel;
 
 	AudioSource soundEffects;
+	HUDController hud;
 
     private void Awake()
     {
@@ -50,6 +52,11 @@ public class GameManager : MonoBehaviour {
 			//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
 			Time.timeScale = 0;
 		}
+	}
+
+	public void collectPoints(int points) {
+		this.points += points;
+		hud.updateScore();
 	}
 
 	public int getCurrentLevel() { return currentLevel; }
@@ -179,4 +186,6 @@ public class GameManager : MonoBehaviour {
 				break;
 		}
 	}
+
+	public void setHUDReference(HUDController hud) {this.hud = hud;}
 }

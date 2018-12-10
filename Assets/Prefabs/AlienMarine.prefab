@@ -1948,6 +1948,8 @@ MonoBehaviour:
   health: 40
   maxHealth: 40
   strength: 15
+  secondsBeforeDestroy: 7
+  pointValue: 100
   timeBetweenShots: 2
 --- !u!120 &120739910651095622
 LineRenderer:

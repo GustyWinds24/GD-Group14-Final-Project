@@ -11,6 +11,8 @@ public class HUDController : MonoBehaviour {
 	public GameObject gameOverPanel;
 	public GameObject enemyStatusPanel;
 
+	[SerializeField] Text scoreValue;
+
 	GameObject player;
 	RifleController rifleController;
 	HealthPoints playerHealth;
@@ -130,6 +132,8 @@ public class HUDController : MonoBehaviour {
 		gameOverPanel.SetActive(false);
 		promptPanel.SetActive(false);
 	}
+
+	public void updateScore() {scoreValue.text = GameManager.instance.points.ToString();}
 
 	public void displayPauseMenu() {pausePanel.SetActive(true);}
 	public void disablePauseMenu() {pausePanel.SetActive(false);}

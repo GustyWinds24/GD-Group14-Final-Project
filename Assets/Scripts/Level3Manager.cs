@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level3Manager : MonoBehaviour {
+public class Level3Manager : LevelManager {
 
     public GameObject gate1;
     public static Level3Manager instance;
@@ -21,7 +21,6 @@ public class Level3Manager : MonoBehaviour {
 	[SerializeField] AudioClip artifactDoorAudioClip;
 
 	AudioSource soundEffects;
-	HUDController hudController;
 
 	[HideInInspector] public bool dragonDead;
 
@@ -35,15 +34,14 @@ public class Level3Manager : MonoBehaviour {
             Destroy(gameObject);
         }
 
-		hudController = GameObject.FindGameObjectWithTag("HUD").GetComponent<HUDController>();
 		soundEffects = GetComponent<AudioSource>();
 	}
 
 	// Use this for initialization
-	void Start () {
+	new void Start () {
+		base.Start();
 		GameManager.instance.setCurrentLevel(3);
 		hudController.setTrial(3);
-		hudController.reset();
 		hudController.displayPrompt(prompt);
 		Time.timeScale = 1;
 	}

@@ -699,11 +699,11 @@ GameObject:
   - component: {fileID: 95375568817542426}
   - component: {fileID: 205868651608405652}
   - component: {fileID: 195511442754904114}
-  - component: {fileID: 114606114852847934}
   - component: {fileID: 136894107419396966}
   - component: {fileID: 136561658149384786}
   - component: {fileID: 82904089204558956}
   - component: {fileID: 120893706971111672}
+  - component: {fileID: 114606114852847934}
   m_Layer: 0
   m_Name: Ciccio_LOD
   m_TagString: Enemy
@@ -2254,6 +2254,7 @@ MonoBehaviour:
   maxHealth: 60
   strength: 25
   secondsBeforeDestroy: 7
+  pointValue: 250
   timeBetweenShots: 7
   stoppingDistance: 2
   randomDestinationRange: 30

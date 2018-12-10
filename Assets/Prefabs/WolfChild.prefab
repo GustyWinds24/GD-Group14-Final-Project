@@ -1410,6 +1410,8 @@ MonoBehaviour:
   health: 20
   maxHealth: 20
   strength: 10
+  secondsBeforeDestroy: 7
+  pointValue: 100
 --- !u!135 &135202124174334798
 SphereCollider:
   m_ObjectHideFlags: 1
