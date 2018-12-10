@@ -47,7 +47,7 @@ public class AnimateWolf : Enemy {
         }
         if (count % 100 == 0)
         {
-            agent.SetDestination(playerTransform.position);
+            if (agent.enabled == true) agent.SetDestination(playerTransform.position);
             this.
             count = 0;
         }

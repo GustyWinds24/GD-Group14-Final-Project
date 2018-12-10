@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour {
     public AudioClip fastCanSound;
     public AudioClip invincibleChipsSound;
 	public AudioClip scanning;
-	public int points;
+	[HideInInspector] public int points;
+	public float difficultyMultiplier = 1;
 
 	[SerializeField] AudioClip lockedDoor;
 

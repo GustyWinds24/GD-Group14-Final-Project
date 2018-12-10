@@ -18071,6 +18071,11 @@ Prefab:
       propertyPath: fastCanSound
       value: 
       objectReference: {fileID: 8300000, guid: bd11b89f2155a4c14ad39e9572d36a68, type: 3}
+    - target: {fileID: 114250467331632078, guid: 8c79cb2a02389b1419b87828bb606277,
+        type: 2}
+      propertyPath: difficultyMultiplier
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c79cb2a02389b1419b87828bb606277, type: 2}
   m_IsPrefabAsset: 0

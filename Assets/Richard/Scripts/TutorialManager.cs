@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TutorialManager : MonoBehaviour {
+public class TutorialManager : LevelManager {
 	
 	public static TutorialManager instance;
 	
@@ -19,7 +19,6 @@ public class TutorialManager : MonoBehaviour {
 	GameObject player;
 	GameObject hud;
 	Text countDownTimerText;
-	HUDController hudController;
 
 	string[] prompt =	{
 					"Welcome to the tutorial of Trials of the Floating Tower. Here you will learn some of the basics to be able to beat a level. " +
@@ -76,7 +75,8 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	new void Start () {
+		base.Start();
 		hudController = hud.GetComponent<HUDController>();
 		countDownTimerText = countDownTimerPanel.transform.GetChild(0).gameObject.GetComponent<Text>();
 

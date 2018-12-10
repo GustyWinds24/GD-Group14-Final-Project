@@ -53,6 +53,9 @@ public class HealthPoints : MonoBehaviour {
 
     public void removeHealth(int health)
     {
+		var damage = health * GameManager.instance.difficultyMultiplier;
+		Debug.Log(string.Format("Removing {0} health from player. DifficultyMultiplier is {1:F2}", (int)damage, GameManager.instance.difficultyMultiplier));
+		health = (int)damage;
         myHealth -= health;
         if(myHealth < 0)
         {
