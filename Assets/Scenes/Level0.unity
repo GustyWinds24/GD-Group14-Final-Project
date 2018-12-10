@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -453,6 +453,7 @@ MonoBehaviour:
   maxHealth: 35
   strength: 15
   secondsBeforeDestroy: 7
+  pointValue: 0
 --- !u!135 &17169307
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1710,6 +1711,7 @@ MonoBehaviour:
   maxHealth: 35
   strength: 15
   secondsBeforeDestroy: 7
+  pointValue: 0
 --- !u!135 &52329886
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3908,8 +3910,7 @@ Prefab:
       propertyPath: m_Name
       value: wolf_02_Mecanim (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114223461622716988, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f8ce944562feeb4989b0b19ecea0122, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &131800571 stripped
@@ -8215,6 +8216,7 @@ MonoBehaviour:
   maxHealth: 35
   strength: 15
   secondsBeforeDestroy: 7
+  pointValue: 0
 --- !u!135 &248769680
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21073,6 +21075,7 @@ MonoBehaviour:
   maxHealth: 35
   strength: 15
   secondsBeforeDestroy: 7
+  pointValue: 0
 --- !u!135 &590259163
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -29501,6 +29504,7 @@ MonoBehaviour:
   maxHealth: 35
   strength: 15
   secondsBeforeDestroy: 7
+  pointValue: 0
 --- !u!135 &826306455
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -38142,6 +38146,7 @@ MonoBehaviour:
   maxHealth: 35
   strength: 15
   secondsBeforeDestroy: 7
+  pointValue: 0
 --- !u!135 &1136503310
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -42006,6 +42011,7 @@ MonoBehaviour:
   maxHealth: 35
   strength: 15
   secondsBeforeDestroy: 7
+  pointValue: 0
 --- !u!135 &1236814459
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -42525,6 +42531,7 @@ MonoBehaviour:
   maxHealth: 35
   strength: 15
   secondsBeforeDestroy: 7
+  pointValue: 0
 --- !u!135 &1250056448
 SphereCollider:
   m_ObjectHideFlags: 0

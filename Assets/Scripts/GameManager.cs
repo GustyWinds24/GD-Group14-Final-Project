@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour {
     public AudioClip invincibleChipsSound;
 	public AudioClip scanning;
 	[HideInInspector] public int points;
-	public float difficultyMultiplier = 1;
+	[HideInInspector] public float difficultyMultiplier = 1;
 
 	[SerializeField] AudioClip lockedDoor;
 
@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
 		soundEffects = GetComponent<AudioSource>();
+		difficultyMultiplier = 1;
     }
 
 	private void Start() {
@@ -87,6 +88,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void gameOver() {
+
+		int highestScoreOnRecord = PlayerPrefs.GetInt("HighestScore");
 
 		switch (currentLevel) {
 
