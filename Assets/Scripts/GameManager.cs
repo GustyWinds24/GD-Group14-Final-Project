@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void onClickMainMenu() {
+		resetScores();
 		SceneManager.LoadScene("MainMenu");
 	}
 
