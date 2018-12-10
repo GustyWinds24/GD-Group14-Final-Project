@@ -126,6 +126,7 @@ public class Dragon : Enemy {
 	override public void takeDamage(int damage) {
 		if (isDead) return;
 		health -= damage;
+		hitCount++;
 		if (health <= 0) {
 			stepsAudioSource.Stop();
 			attackAudioSource.Stop();
@@ -140,7 +141,9 @@ public class Dragon : Enemy {
 			animator.SetTrigger("die");
 			isDead = true;
 			Level3Manager.instance.dragonDead = true;
-			GameManager.instance.collectPoints(pointValue);
+			int points = pointValue / hitCount;
+			Debug.Log(string.Format("{0} was hit {1} times and is rewarding {2} points", enemyName, hitCount, points));
+			GameManager.instance.collectPoints(points);
 		}
 		blood.Play();
 	}

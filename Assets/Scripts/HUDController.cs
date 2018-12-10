@@ -11,7 +11,10 @@ public class HUDController : MonoBehaviour {
 	public GameObject gameOverPanel;
 	public GameObject enemyStatusPanel;
 
-	[SerializeField] Text scoreValue;
+	[SerializeField] Text liveScoreValue;
+	[SerializeField] Text[] endGameScoreDisplay;
+
+	int GAME_OVER = 0, GAME_WON = 1;
 
 	GameObject player;
 	RifleController rifleController;
@@ -114,6 +117,7 @@ public class HUDController : MonoBehaviour {
 	}
 
 	public void gameOver() {
+		endGameScoreDisplay[GAME_OVER].text = string.Format("Score:  {0}\nHigh Score:  {1}", GameManager.instance.points, GameManager.instance.highestScoreOnRecord);
 		gameOverPanel.SetActive(true);
 	}
 
@@ -133,7 +137,11 @@ public class HUDController : MonoBehaviour {
 		promptPanel.SetActive(false);
 	}
 
-	public void updateScore() {scoreValue.text = GameManager.instance.points.ToString();}
+	public void setGameWonScore() {
+		endGameScoreDisplay[GAME_WON].text = string.Format("Score:  {0}\nHigh Score:  {1}", GameManager.instance.points, GameManager.instance.highestScoreOnRecord);
+	}
+
+	public void updateScore() {liveScoreValue.text = GameManager.instance.points.ToString();}
 
 	public void displayPauseMenu() {pausePanel.SetActive(true);}
 	public void disablePauseMenu() {pausePanel.SetActive(false);}

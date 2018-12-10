@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+	float EASY = .5f, MEDIUM = 1, HARD = 2;
+
     public static GameManager instance;
 
 	public AudioClip medkitAudio;
@@ -14,7 +16,7 @@ public class GameManager : MonoBehaviour {
 	public AudioClip scanning;
 	[HideInInspector] public int points;
 	[HideInInspector] public int highestScoreOnRecord;
-	[HideInInspector] public float difficultyMultiplier = 1;
+	[HideInInspector] public float difficultyMultiplier;
 
 	[SerializeField] AudioClip lockedDoor;
 
@@ -47,7 +49,7 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
 		soundEffects = GetComponent<AudioSource>();
-		difficultyMultiplier = 1;
+		difficultyMultiplier = MEDIUM;
     }
 
 	private void Start() {
@@ -102,16 +104,8 @@ public class GameManager : MonoBehaviour {
 	public void gameOver() {
 
 		Time.timeScale = 0;
-		if (PlayerPrefs.HasKey(highScore)) {
-			int highestScoreOnRecord = PlayerPrefs.GetInt(highScore);
-			if (points > highestScoreOnRecord) {
-				PlayerPrefs.SetInt(highScore, points);
-			}
-		}
-		else {
-			Debug.Log("No HighestScore Yet, Setting HighestScore");
-			PlayerPrefs.SetInt(highScore, points);
-		}
+
+		doScores();
 
 		switch (currentLevel) {
 
@@ -131,6 +125,45 @@ public class GameManager : MonoBehaviour {
 				Level3Manager.instance.gameOver();
 				break;
 		}
+	}
+
+	public void gameWon() {
+		doScores();
+	}
+
+	public void doScores() {
+		if (PlayerPrefs.HasKey(highScore)) {
+			highestScoreOnRecord = PlayerPrefs.GetInt(highScore);
+			if (points > highestScoreOnRecord) {
+				Debug.Log(string.Format("New High Score, {0}", points));
+				highestScoreOnRecord = points;
+				PlayerPrefs.SetInt(highScore, points);
+			}
+			else {
+				Debug.Log(string.Format("Didn't beat Highest score on record, {0}", highestScoreOnRecord));
+			}
+		}
+		else {
+			Debug.Log(string.Format("Setting HighestScore to {0}", points));
+			PlayerPrefs.SetInt(highScore, points);
+		}
+	}
+
+	public void setDifficulty(string s) {
+		switch (s) {
+			case "easy":
+				difficultyMultiplier = EASY;
+				break;
+
+			case "medium":
+				difficultyMultiplier = MEDIUM;
+				break;
+
+			case "hard":
+				difficultyMultiplier = HARD;
+				break;
+		}
+		Debug.Log(string.Format("Difficult was changed. Current difficultyMultiplier == {0:F2}", difficultyMultiplier));
 	}
 
 	public void playMedkitSound() {

@@ -193,6 +193,8 @@ public class Level3Manager : LevelManager {
 
         Time.timeScale = 0;
         //Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
+		GameManager.instance.doScores();
+		hudController.setGameWonScore();
         winPanel.SetActive(true);
     }
 
