@@ -105,10 +105,6 @@ public class HUDController : MonoBehaviour {
 	public void setDisplayEnemy (Enemy enemy) {
 		enemyName.text = "Enemy:  " + enemy.enemyName;
 		enemyHP.text = string.Format("HP:       {0} / {1}", enemy.health, enemy.maxHealth);
-	}
-
-	public void showEnemy() {
-		
 		enemyStatusPanel.GetComponent<Animator>().SetTrigger("displayEnemy");
 	}
 

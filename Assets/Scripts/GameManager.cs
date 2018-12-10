@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] AudioClip lockedDoor;
 
     int currentLevel;
+	public int grenadeDamage = 15;
 
 	AudioSource soundEffects;
 	HUDController hud;
@@ -280,4 +281,5 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void setHUDReference(HUDController hud) {this.hud = hud;}
+	public HUDController getHUD() {return hud;}
 }

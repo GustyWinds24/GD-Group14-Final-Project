@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour {
 		if (isDead) return;
 		health -= damage;
 		hitCount++;
+		GameManager.instance.getHUD().setDisplayEnemy(this);
 		if (health <= 0) {
 			health = 0;
 			var colliders = GetComponents<Collider>();

@@ -127,6 +127,7 @@ public class Dragon : Enemy {
 		if (isDead) return;
 		health -= damage;
 		hitCount++;
+		GameManager.instance.getHUD().setDisplayEnemy(this);
 		if (health <= 0) {
 			stepsAudioSource.Stop();
 			attackAudioSource.Stop();

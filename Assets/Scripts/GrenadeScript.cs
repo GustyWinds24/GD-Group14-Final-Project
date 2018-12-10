@@ -9,6 +9,12 @@ public class GrenadeScript : MonoBehaviour {
     Light grenadeLight;
     MeshRenderer rend;
 
+	SphereCollider damageCollider;
+
+	private void Awake() {
+		damageCollider = GetComponents<SphereCollider>()[1];
+	}
+
 	// Use this for initialization
 	void Start () {
         emitter = GetComponent<ParticleSystem>();
@@ -26,10 +32,20 @@ public class GrenadeScript : MonoBehaviour {
         grenadeLight.color = Color.white;
         sound.Play();
         emitter.Play();
+
+		damageCollider.enabled = true;
+
         yield return new WaitForSeconds(0.5f);
         grenadeLight.intensity = 0;
         yield return new WaitForSeconds(1.5f);
 
         Destroy(gameObject);
     }
+
+	private void OnTriggerEnter(Collider other) {
+		if (other.CompareTag("Enemy")) {
+			var e = other.gameObject.GetComponent<Enemy>();
+			e.takeDamage(GameManager.instance.grenadeDamage);
+		}
+	}
 }

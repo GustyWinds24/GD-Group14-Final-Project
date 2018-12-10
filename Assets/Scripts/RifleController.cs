@@ -84,8 +84,6 @@ public class RifleController : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Enemy")) {
 				Enemy enemy = hit.collider.gameObject.GetComponent<Enemy>();
 				enemy.takeDamage(currentWeapon.damage);
-				hudController.setDisplayEnemy(enemy);
-				hudController.showEnemy();
             }
 			gunLine.SetPosition(1, hit.point);
 			gunLine.enabled = true;
