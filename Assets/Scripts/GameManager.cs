@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
 	public AudioClip scanning;
 	[HideInInspector] public int points;
 	[HideInInspector] public int highestScoreOnRecord;
-	[HideInInspector] public float difficultyMultiplier = 1;
+	public float difficultyMultiplier = 1;
 
 	[SerializeField] AudioClip lockedDoor;
 

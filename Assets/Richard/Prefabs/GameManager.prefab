@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1749015912294074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.310062, y: 6.76054, z: -45.0606}
+  m_LocalPosition: {x: 54.67, y: 22.28, z: -83.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -155,5 +155,7 @@ MonoBehaviour:
   scanning: {fileID: 8300000, guid: e480b7238979674499f6b7b25674ba67, type: 3}
   points: 0
   highestScoreOnRecord: 0
-  difficultyMultiplier: 0
+  difficultyMultiplier: 1
   lockedDoor: {fileID: 8300000, guid: fb44b7e678a541f43812e4ec7f3299d7, type: 3}
+  playerBeatLevel: 0
+  levelStartingPoints: 0
