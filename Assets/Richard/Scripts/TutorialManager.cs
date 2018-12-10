@@ -77,6 +77,7 @@ public class TutorialManager : LevelManager {
 	// Use this for initialization
 	new void Start () {
 		base.Start();
+		GameManager.instance.setCurrentLevel(0);
 		hudController = hud.GetComponent<HUDController>();
 		countDownTimerText = countDownTimerPanel.transform.GetChild(0).gameObject.GetComponent<Text>();
 
@@ -107,7 +108,7 @@ public class TutorialManager : LevelManager {
 		}
 
 		if (player.transform.position.y < dropPoint) {
-			gameOver();
+			GameManager.instance.gameOver();
 		}
 	}
 
@@ -134,8 +135,6 @@ public class TutorialManager : LevelManager {
 	public void gameOver() {
 		countDownTimerPanel.SetActive(false);
 		hudController.gameOver();
-		//Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
-		Time.timeScale = 0;
 	}
 
 	public void pauseGame() {hudController.displayPauseMenu();}

@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public AudioClip invincibleChipsSound;
 	public AudioClip scanning;
 	[HideInInspector] public int points;
+	[HideInInspector] public int highestScoreOnRecord;
 	[HideInInspector] public float difficultyMultiplier = 1;
 
 	[SerializeField] AudioClip lockedDoor;
@@ -22,8 +23,19 @@ public class GameManager : MonoBehaviour {
 	AudioSource soundEffects;
 	HUDController hud;
 
+	string highScore = "HighestScore";
+
     private void Awake()
     {
+
+		if (PlayerPrefs.HasKey(highScore)) {
+			highestScoreOnRecord = PlayerPrefs.GetInt(highScore);
+			Debug.Log(string.Format("HighestScore on record is {0}", highestScoreOnRecord));
+		}
+		else {
+			Debug.Log("No HighestScore on record");
+		}
+
         if (instance == null)
         {
             instance = this;
@@ -89,7 +101,17 @@ public class GameManager : MonoBehaviour {
 
 	public void gameOver() {
 
-		int highestScoreOnRecord = PlayerPrefs.GetInt("HighestScore");
+		Time.timeScale = 0;
+		if (PlayerPrefs.HasKey(highScore)) {
+			int highestScoreOnRecord = PlayerPrefs.GetInt(highScore);
+			if (points > highestScoreOnRecord) {
+				PlayerPrefs.SetInt(highScore, points);
+			}
+		}
+		else {
+			Debug.Log("No HighestScore Yet, Setting HighestScore");
+			PlayerPrefs.SetInt(highScore, points);
+		}
 
 		switch (currentLevel) {
 

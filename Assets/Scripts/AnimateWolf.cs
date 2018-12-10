@@ -29,6 +29,7 @@ public class AnimateWolf : Enemy {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Time.timeScale == 0) return;
         currentPositionX = transform.position.x;
         currentPositionZ = transform.position.z;
 		if (currentPositionX != startPositionX && currentPositionZ != startPositionZ)

@@ -173,7 +173,5 @@ public class Level2Manager : LevelManager {
     public void gameOver()
     {
         hudController.gameOver();
-        //Debug.Log(string.Format("{0} is setting timeScale to zero", gameObject.name));
-        Time.timeScale = 0;
     }
 }

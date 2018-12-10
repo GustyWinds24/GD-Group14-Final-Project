@@ -19,8 +19,7 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-
+		if (Time.timeScale == 0) return;
         transform.position = Vector3.SmoothDamp(transform.position, playerTransform.position + Quaternion.AngleAxis(angleFromGround, Vector3.right) * Quaternion.AngleAxis(angleAround, Vector3.up) * Vector3.back * distance, ref currentVelocity, timeToAdjust);
 	}
 }

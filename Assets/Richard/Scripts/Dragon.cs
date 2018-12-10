@@ -63,7 +63,6 @@ public class Dragon : Enemy {
 	
 	// Update is called once per frame
 	void Update () {
-
 		if (Time.timeScale == 0) return;
 
 		if (isDead) {
@@ -141,6 +140,7 @@ public class Dragon : Enemy {
 			animator.SetTrigger("die");
 			isDead = true;
 			Level3Manager.instance.dragonDead = true;
+			GameManager.instance.collectPoints(pointValue);
 		}
 		blood.Play();
 	}

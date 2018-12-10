@@ -149,5 +149,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   medkitAudio: {fileID: 8300000, guid: e59fc7374dc374d6db7f805e43cc5c06, type: 3}
   DamageBottleSound: {fileID: 8300000, guid: b2204f47b903e413e8e8e442d60a8ca1, type: 3}
+  fastCanSound: {fileID: 8300000, guid: bd11b89f2155a4c14ad39e9572d36a68, type: 3}
+  invincibleChipsSound: {fileID: 8300000, guid: 24c43b2718cf4490d8ac123ee92a46bf,
+    type: 3}
   scanning: {fileID: 8300000, guid: e480b7238979674499f6b7b25674ba67, type: 3}
+  points: 0
+  highestScoreOnRecord: 0
+  difficultyMultiplier: 0
   lockedDoor: {fileID: 8300000, guid: fb44b7e678a541f43812e4ec7f3299d7, type: 3}
