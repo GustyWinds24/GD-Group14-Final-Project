@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -648,6 +648,7 @@ GameObject:
   - component: {fileID: 55086191}
   - component: {fileID: 55086194}
   - component: {fileID: 55086193}
+  - component: {fileID: 55086192}
   m_Layer: 0
   m_Name: LeftDoor
   m_TagString: Untagged
@@ -668,6 +669,18 @@ Transform:
   m_Father: {fileID: 1835898603}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &55086192
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 55086190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.999999, y: 0.2911806, z: 9.999999}
+  m_Center: {x: -0.0000038130456, y: 0.012292385, z: 0}
 --- !u!23 &55086193
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3985,6 +3998,7 @@ GameObject:
   - component: {fileID: 463761670}
   - component: {fileID: 463761673}
   - component: {fileID: 463761672}
+  - component: {fileID: 463761671}
   m_Layer: 0
   m_Name: RightDoor
   m_TagString: Untagged
@@ -4005,6 +4019,18 @@ Transform:
   m_Father: {fileID: 1835898603}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &463761671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 463761669}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.999999, y: 0.2911806, z: 9.999999}
+  m_Center: {x: -0.0000038130456, y: 0.012292385, z: 0}
 --- !u!23 &463761672
 MeshRenderer:
   m_ObjectHideFlags: 0
