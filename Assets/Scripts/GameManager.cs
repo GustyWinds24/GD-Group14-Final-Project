@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour {
 	public AudioClip scanning;
 	[HideInInspector] public int points;
 	[HideInInspector] public int highestScoreOnRecord;
-	[HideInInspector] public float difficultyMultiplier;
+	[HideInInspector] public float difficultyMultiplier = 1;
 
 	[SerializeField] AudioClip lockedDoor;
 
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour {
 	AudioSource soundEffects;
 	HUDController hud;
 
+	int levelStartingPoints;
 	string highScore = "HighestScore";
 
     private void Awake()
@@ -49,7 +50,6 @@ public class GameManager : MonoBehaviour {
 
         DontDestroyOnLoad(gameObject);
 		soundEffects = GetComponent<AudioSource>();
-		difficultyMultiplier = MEDIUM;
     }
 
 	private void Start() {
