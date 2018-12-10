@@ -23,9 +23,9 @@ public class TutorialManager : LevelManager {
 	string[] prompt =	{
 					"Welcome to the tutorial of Trials of the Floating Tower. Here you will learn some of the basics to be able to beat a level. " +
 					"First off, use the WASD keys in order to move around. Click the left mouse button to fire your rifle. Click the right mouse button to " +
-					"throw a grenade. Use the keys 1 and 2 to cycle between rifle and pistol. Use the Escape key to pause the game. " +
-					"Rotate with the mouse. Click Ok to begin. W - Move up-right  A - Move up-left  S - Move down-left  D - Move down-right " +
-					"1 - Switch to pistol  2 - Switch to rifle  Esc - pause the game",
+					"throw a grenade. You have unlimited ammo. Use the Escape key to pause the game. " +
+					"Rotate with the mouse. Click Ok to begin. W - Move up  A - Move left  S - Move down  D - Move right " +
+					"Esc - pause the game",
 
 					"You can jump by pressing the spacebar. Stand still and press it to jump in place. You can jump in any direction as long " +
 					"as you are pressing one of the direction keys first. Try jumping over the gap near the bottom right of your screen.",
@@ -44,7 +44,7 @@ public class TutorialManager : LevelManager {
 					"of who you're facing.",
 
 					"Items are scattered around through each level. Pick one up and you can be healed, granted a temporary speed boost, receive " +
-					"more ammo and much more! Down here is a health pack. Later on you will find bottles that grants you x3 damage. " +
+					"invincibility and much more! Down here is a health pack. Later on you will find bottles that grants you x3 damage. " +
 					"Just understand that power ups only last 10 seconds so make them count.",
 
 					"You are about to face enemies at your height. These enemies are different than the ones you faced off earlier since these " +
