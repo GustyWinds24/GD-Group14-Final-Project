@@ -99,7 +99,7 @@ public class HUDController : MonoBehaviour {
 	}
 
 	void updateAmmo() {
-		weaponAmmo.text = "Ammo: " + rifleController.getAmmo();
+        weaponAmmo.text = "Ammo: INFINITY"; //+ rifleController.getAmmo();
 	}
 
 	public void setDisplayEnemy (Enemy enemy) {
