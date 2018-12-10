@@ -24,14 +24,11 @@ public class Level1Manager : LevelManager {
 					"intel we believe is on this floor. The code to get to the stairs is on one of the " +
 					"documents. The intel is vital to our future operations. Stay alive soldier.";
 
-	bool notFirstLoad;
-
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-			notFirstLoad = true;
         }
         else if (instance != this)
         {

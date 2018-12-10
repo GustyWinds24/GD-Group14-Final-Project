@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour {
 	public void nextLevel() {
 
 		playerBeatLevel = true;
-		GameManager.instance.saveLevelStartPoints();
+		saveLevelStartPoints();
 		loadLevel(currentLevel + 1);
 	}
 
@@ -256,18 +256,18 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void saveLevelStartPoints() {
+		Debug.Log(string.Format("Saving level score of {0} to levelStartingPoints", points));
 		levelStartingPoints = points;
 	}
 
 	public void reloadLevelStartPoints() {
+		Debug.Log(string.Format("Reloading previous level score of {0} to points", levelStartingPoints));
 		points = levelStartingPoints;
 	}
 
 	public bool checkRestartingLevel(int level) {
 		bool restart = false;
 		if (level == currentLevel) {
-
-			points = levelStartingPoints;
 			restart = true;
 		}
 		return restart;
